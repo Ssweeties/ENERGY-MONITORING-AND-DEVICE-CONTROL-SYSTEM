@@ -1,0 +1,244 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\DA2\hello_world\build\hello_world.elf D:\DA2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py'
+���������������������������������������������������������������� Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=329e4h (207332) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00042a0c vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00046ad0 vaddr=40080000 size=09548h ( 38216) load[0m
+[0;32mI (179) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a55a4h (677284) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f55cc vaddr=40089548 size=11838h ( 71736) load[0m
+[0;32mI (438) esp_image: segment 5: paddr=00106e0c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (451) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (462) cpu_start: Multicore app[0m
+[0;32mI (470) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (476) app_init: Project name:     hello_world[0m
+[0;32mI (481) app_init: App version:      1[0m
+[0;32mI (484) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (489) app_init: ELF file SHA256:  f128154c4...[0m
+[0;32mI (493) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (515) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (520) heap_init: At 3FFB8CE0 len 00027320 (156 KiB): DRAM[0m
+[0;32mI (525) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (536) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (543) spi_flash: detected chip: generic[0m
+[0;32mI (545) spi_flash: flash io: dio[0m
+[0;33mW (548) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (570) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (578) main_task: Started on CPU0[0m
+[0;32mI (588) main_task: Calling app_main()[0m
+[0;32mI (588) MAIN: ========== SYSTEM START ==========[0m
+[0;32mI (608) MAIN: GPIO initialized[0m
+[0;32mI (618) wifi:wifi driver task: 3ffc0e04, prio:23, stack:6656, core=0[0m
+[0;32mI (628) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (628) wifi:wifi certification version: v7.0[0m
+[0;32mI (628) wifi:config NVS flash: enabled[0m
+[0;32mI (628) wifi:config nano formatting: disabled[0m
+[0;32mI (628) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (638) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (638) wifi:Init management short buffer num: 32[0m
+[0;32mI (648) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (648) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (658) wifi:Init static rx buffer num: 10[0m
+[0;32mI (658) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (658) wifi_init: rx ba win: 6[0m
+[0;32mI (668) wifi_init: accept mbox: 6[0m
+[0;32mI (668) wifi_init: tcpip mbox: 32[0m
+[0;32mI (668) wifi_init: udp mbox: 6[0m
+[0;32mI (668) wifi_init: tcp mbox: 6[0m
+[0;32mI (678) wifi_init: tcp tx win: 5760[0m
+[0;32mI (678) wifi_init: tcp rx win: 5760[0m
+[0;32mI (678) wifi_init: tcp mss: 1440[0m
+[0;32mI (688) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (688) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (698) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (698) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (798) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (848) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (848) wifi:enable tsf[0m
+[0;32mI (848) MAIN: WiFi initialized[0m
+[0;32mI (848) MAIN: Waiting for WiFi...[0m
+[0;32mI (1218) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1218) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2488) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2498) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2528) wifi:connected with Redmi Note 14, aid = 1, channel 1, BW20, bssid = 7a:53:e4:e9:4b:24[0m
+[0;32mI (2528) wifi:security: WPA3-SAE, phy: bgn, rssi: -29[0m
+[0;32mI (2538) wifi:pm start, type: 1[0m
+
+[0;32mI (2538) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2608) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2608) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+����������������������������������������������������������������3568) esp_netif_handlers: sta ip: 10.205.64.188, mask: 255.255.255.0, gw: 10.205.64.102
+[0;32mI (3568) MAIN: WiFi connected, IP: 10.205.64.188[0m
+[0;32mI (5848) OLED: Initializing...[0m
+[0;32mI (5978) OLED: Ready[0m
+[0;32mI (5998) POWER: Initializing...[0m
+[0;32mI (6018) POWER: ACS712 ch6 zero=2335mV[0m
+[0;32mI (6028) POWER: ZMPT ch7 zero=2403mV[0m
+[0;32mI (6048) POWER: ACS712 ch4 zero=2361mV[0m
+[0;32mI (6058) POWER: ZMPT ch5 zero=2386mV[0m
+[0;32mI (6058) POWER: Ready[0m
+[0;32mI (6058) FIREBASE: Initializing...[0m
+[0;32mI (6058) FIREBASE: Ready[0m
+[0;32mI (6058) MAIN: System ready[0m
+[0;32mI (6058) MAIN: Stream Task Started[0m
+[0;32mI (6058) MAIN: Push Task Started[0m
+[0;32mI (6068) MAIN: Main task started[0m
+[0;32mI (6068) MAIN: ========== RUNNING ==========[0m
+[0;32mI (6068) main_task: Returned from app_main()[0m
+[0;32mI (10828) wifi:<ba-add>idx:0 (ifx:0, 7a:53:e4:e9:4b:24), tid:3, ssn:16, winSize:64[0m
+[0;32mI (19508) FIREBASE: Logout detected[0m
+[0;32mI (19518) MAIN: Logout requested[0m
+[0;32mI (19518) LOGOUT: Logout requested[0m
+[0;32mI (19518) LOGOUT: Saving: UID= E1=0.000 E2=0.000 Wh[0m
+[0;32mI (21758) FIREBASE: Logout detected[0m
+[0;32mI (38348) FIREBASE: Login detected[0m
+[0;32mI (44768) LOGOUT: Logout complete[0m
+[0;32mI (44788) MAIN: Logout requested[0m
+[0;32mI (44788) LOGOUT: Logout requested[0m
+[0;32mI (44788) LOGOUT: Saving: UID= E1=0.000 E2=0.000 Wh[0m
+[0;32mI (68118) LOGOUT: Logout complete[0m
+[0;32mI (68128) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (68128) LOGIN: Login requested[0m
+[0;32mI (68128) LOGIN: RFID scan started[0m
+[0;32mI (68128) RFID: Initializing...[0m
+[0;32mI (68198) RFID: SPI initialized[0m
+[0;32mI (68248) RFID: Version: 0x82[0m
+[0;32mI (68248) RFID: Ready[0m
+[0;32mI (70098) FIREBASE: Login detected[0m
+[0;32mI (70098) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (70098) LOGIN: Login requested[0m
+[0;33mW (70098) LOGIN: RFID task running[0m
+[0;32mI (71948) FIREBASE: Login detected[0m
+[0;32mI (71958) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (71958) LOGIN: Login requested[0m
+[0;33mW (71958) LOGIN: RFID task running[0m
+[0;32mI (73858) FIREBASE: Login detected[0m
+[0;32mI (73868) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (73868) LOGIN: Login requested[0m
+[0;33mW (73868) LOGIN: RFID task running[0m
+[0;32mI (76078) LOGIN: Card: 0A:4E:17:05[0m
+[0;32mI (76098) RFID: Deinitialized[0m
+[0;32mI (76098) LOGIN: Authenticated: 0A:4E:17:05[0m
+[0;32mI (76118) FIREBASE: Login detected[0m
+[0;32mI (76128) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (76128) LOGIN: Login requested[0m
+[0;33mW (76128) LOGIN: RFID task running[0m
+[0;32mI (79738) FIREBASE: Login detected[0m
+[0;32mI (79748) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (79748) LOGIN: Login requested[0m
+[0;33mW (79748) LOGIN: RFID task running[0m
+[0;32mI (81808) LOGIN: Loaded: E1=44.745 E2=10.762 Wh[0m
+[0;32mI (83818) FIREBASE: Login detected[0m
+[0;32mI (83818) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (83818) LOGIN: Login requested[0m
+[0;33mW (83818) LOGIN: RFID task running[0m
+[0;32mI (88318) FIREBASE: Login detected[0m
+[0;32mI (88328) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (88328) LOGIN: Login requested[0m
+[0;33mW (88328) LOGIN: RFID task running[0m
+[0;32mI (92618) FIREBASE: Login detected[0m
+[0;32mI (92628) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (92628) LOGIN: Login requested[0m
+[0;33mW (92628) LOGIN: RFID task running[0m
+[0;32mI (96368) FIREBASE: Login detected[0m
+[0;32mI (96378) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (96378) LOGIN: Login requested[0m
+[0;33mW (96378) LOGIN: RFID task running[0m
+[0;32mI (98678) MAIN: Dev1: I=1.611A V=87.8V P=141.40W E=44.804Wh[0m
+[0;32mI (98678) MAIN: Dev2: I=0.000A V=0.0V P=0.00W E=10.762Wh[0m
+[0;32mI (100168) MAIN: Dev1: I=0.300A V=46.9V P=14.08W E=44.810Wh[0m
+[0;32mI (100168) MAIN: Dev2: I=0.000A V=0.0V P=0.00W E=10.762Wh[0m
+[0;32mI (100618) FIREBASE: Login detected[0m
+[0;32mI (100618) MAIN: Login requested - waiting for RFID[0m
+[0;32mI (100618) LOGIN: Login requested[0m
+[0;33mW (100618) LOGIN: Already logged in[0m
+[0;32mI (102868) LOGIN: Login complete[0m
+[0;32mI (105298) MAIN: Dev1: I=2.280A V=138.6V P=315.99W E=44.941Wh[0m
+[0;32mI (105298) MAIN: Dev2: I=2.947A V=115.0V P=338.82W E=10.903Wh[0m
+[0;32mI (106788) MAIN: Dev1: I=1.226A V=75.6V P=92.70W E=44.980Wh[0m
+[0;32mI (106798) MAIN: Dev2: I=1.702A V=82.6V P=140.56W E=10.962Wh[0m
+[0;32mI (108288) MAIN: Dev1: I=1.226A V=122.4V P=150.08W E=45.042Wh[0m
+[0;32mI (108298) MAIN: Dev2: I=2.823A V=118.9V P=335.70W E=11.102Wh[0m
+[0;32mI (109798) MAIN: Dev1: I=2.550A V=135.0V P=344.27W E=45.186Wh[0m
+[0;32mI (109798) MAIN: Dev2: I=2.542A V=61.7V P=156.78W E=11.167Wh[0m
+[0;32mI (111298) MAIN: Dev1: I=2.377A V=139.1V P=330.50W E=45.324Wh[0m
+[0;32mI (111298) MAIN: Dev2: I=2.985A V=108.7V P=324.48W E=11.302Wh[0m
+[0;32mI (112798) MAIN: Dev1: I=2.341A V=146.1V P=342.00W E=45.466Wh[0m
+[0;32mI (112798) MAIN: Dev2: I=2.346A V=50.3V P=118.05W E=11.351Wh[0m
+[0;32mI (114288) MAIN: Dev1: I=2.349A V=129.0V P=303.05W E=45.592Wh[0m
+[0;32mI (114298) MAIN: Dev2: I=2.813A V=42.2V P=118.61W E=11.401Wh[0m
+[0;32mI (115798) MAIN: Dev1: I=2.550A V=147.5V P=376.08W E=45.749Wh[0m
+[0;32mI (115798) MAIN: Dev2: I=2.245A V=74.8V P=167.89W E=11.471Wh[0m
+[0;32mI (117298) MAIN: Dev1: I=2.382A V=120.4V P=286.70W E=45.868Wh[0m
+[0;32mI (117298) MAIN: Dev2: I=2.821A V=113.6V P=320.30W E=11.604Wh[0m
+[0;32mI (118788) MAIN: Dev1: I=2.324A V=109.0V P=253.25W E=45.974Wh[0m
+[0;32mI (118788) MAIN: Dev2: I=1.680A V=65.9V P=110.76W E=11.650Wh[0m
+[0;32mI (120298) MAIN: Dev1: I=1.593A V=89.8V P=143.05W E=46.034Wh[0m
+[0;32mI (120298) MAIN: Dev2: I=2.007A V=93.1V P=186.77W E=11.728Wh[0m
+[0;32mI (121798) MAIN: Dev1: I=1.224A V=83.5V P=102.26W E=46.076Wh[0m
+[0;32mI (121798) MAIN: Dev2: I=2.823A V=112.6V P=317.72W E=11.860Wh[0m
+[0;32mI (123288) MAIN: Dev1: I=1.380A V=80.7V P=111.34W E=46.123Wh[0m
+[0;32mI (123298) MAIN: Dev2: I=1.701A V=73.2V P=124.47W E=11.912Wh[0m
+[0;32mI (124788) MAIN: Dev1: I=1.915A V=66.3V P=126.90W E=46.175Wh[0m
+[0;32mI (124788) MAIN: Dev2: I=1.680A V=71.0V P=119.21W E=11.962Wh[0m
+[0;32mI (126218) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (126228) MAIN: Dev2: I=1.000A V=47.3V P=47.26W E=11.982Wh[0m
+[0;32mI (127728) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (127728) MAIN: Dev2: I=1.837A V=98.7V P=181.36W E=12.057Wh[0m
+[0;32mI (129218) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (129218) MAIN: Dev2: I=1.699A V=21.4V P=36.31W E=12.072Wh[0m
+[0;32mI (130718) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (130728) MAIN: Dev2: I=1.113A V=49.4V P=55.02W E=12.095Wh[0m
+[0;32mI (132148) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (132148) MAIN: Dev2: I=0.000A V=0.0V P=0.00W E=12.095Wh[0m
+[0;32mI (133648) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (133648) MAIN: Dev2: I=0.000A V=0.0V P=0.00W E=12.095Wh[0m
+[0;32mI (135148) MAIN: Dev1: I=0.000A V=0.0V P=0.00W E=46.175Wh[0m
+[0;32mI (135148) MAIN: Dev2: I=0.000A V=0.0V P=0.00W E=12.095Wh[0m
+[0;32mI (136798) MAIN: Dev1: I=1.710A V=135.9V P=232.44W E=46.272Wh[0m
+[0;32mI (136798) MAIN: Dev2: I=2.948A V=120.6V P=355.51W E=12.243Wh[0m
+[0;32mI (138298) MAIN: Dev1: I=2.244A V=135.0V P=302.97W E=46.399Wh[0m
+[0;32mI (138298) MAIN: Dev2: I=2.150A V=51.0V P=109.64W E=12.289Wh[0m
+[0;32mI (139788) MAIN: Dev1: I=1.099A V=75.0V P=82.46W E=46.433Wh[0m
+[0;32mI (139798) MAIN: Dev2: I=2.054A V=128.8V P=264.48W E=12.399Wh[0m
+[0;32mI (140338) FIREBASE: Logout detected[0m
+[0;32mI (140348) MAIN: Logout requested[0m
+[0;32mI (140348) LOGOUT: Logout requested[0m
+[0;32mI (140348) LOGOUT: Saving: UID=0A:4E:17:05 E1=46.433 E2=12.399 Wh[0m
+[0;32mI (147298) FIREBASE: Logout detected[0m
+[0;32mI (179668) LOGOUT: Logout complete[0m
+[0;32mI (179678) MAIN: Logout requested[0m
+[0;32mI (179678) LOGOUT: Logout requested[0m
+[0;32mI (179678) LOGOUT: Saving: UID= E1=0.000 E2=0.000 Wh[0m

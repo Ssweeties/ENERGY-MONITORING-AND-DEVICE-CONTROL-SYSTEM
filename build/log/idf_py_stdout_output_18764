@@ -1,0 +1,818 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\DA2\hello_world\build\hello_world.elf D:\DA2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=333c4h (209860) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000433ec vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=000474b0 vaddr=40080000 size=08b68h ( 35688) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5ab8h (678584) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f5ae0 vaddr=40088b68 size=12218h ( 74264) load[0m
+[0;32mI (440) esp_image: segment 5: paddr=00107d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (478) app_init: Project name:     hello_world[0m
+[0;32mI (482) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  dedffee24...[0m
+[0;32mI (495) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (522) heap_init: At 3FFB9100 len 00026F00 (155 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (562) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (590) main_task: Calling app_main()[0m
+[0;32mI (590) MAIN: ========== BOOT START ==========[0m
+[0;32mI (610) MAIN: NVS initialized[0m
+[0;32mI (610) MAIN: Firebase mutex created[0m
+[0;32mI (610) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc11a0, prio:23, stack:6656, core=0[0m
+[0;32mI (630) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (630) wifi:wifi certification version: v7.0[0m
+[0;32mI (630) wifi:config NVS flash: enabled[0m
+[0;32mI (630) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (640) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (640) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (660) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (670) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (790) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (790) wifi:enable tsf[0m
+[0;32mI (800) MAIN: WiFi initialization done[0m
+[0;32mI (800) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (890) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (890) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2170) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2180) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2210) wifi:connected with Redmi Note 14, aid = 1, channel 13, BW20, bssid = fe:43:21:0d:9b:1d[0m
+[0;32mI (2210) wifi:security: WPA3-SAE, phy: bgn, rssi: -36[0m
+[0;32mI (2210) wifi:pm start, type: 1[0m
+
+[0;32mI (2210) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2220) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2230) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3260) esp_netif_handlers: sta ip: 10.11.45.188, mask: 255.255.255.0, gw: 10.11.45.156[0m
+[0;32mI (3260) MAIN: WiFi connected, IP: 10.11.45.188[0m
+[0;32mI (5800) OLED: Initializing OLED...[0m
+[0;32mI (5800) OLED: I2C initialized successfully[0m
+[0;32mI (5930) OLED: OLED initialized successfully[0m
+[0;32mI (5960) MAIN: Displayed login screen[0m
+[0;32mI (5960) POWER: Initializing power measurement module...[0m
+[0;32mI (5960) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5970) POWER: ACS712 channel 6 zero point: 2380.92 mV[0m
+[0;32mI (5970) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (5980) POWER: ACS712 channel 4 zero point: 2375.24 mV[0m
+[0;32mI (5980) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (6000) POWER: ZMPT101B channel 7 zero point: 2384.92 mV[0m
+[0;32mI (6000) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6010) POWER: ZMPT101B channel 5 zero point: 2381.00 mV[0m
+[0;32mI (6010) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6010) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6010) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[0;32mI (8400) wifi:<ba-add>idx:0 (ifx:0, fe:43:21:0d:9b:1d), tid:3, ssn:16, winSize:64[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x4008abe1:0x3ffba380 0x4008aba9:0x3ffba3a0 0x4008bc4e:0x3ffba3c0 0x4008cf93:0x3ffba440 0x4008bd58:0x3ffba460 0x4008bd0a:0xa5a5a5a5 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: dedffee24
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=333c4h (209860) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000433ec vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=000474b0 vaddr=40080000 size=08b68h ( 35688) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5ab8h (678584) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f5ae0 vaddr=40088b68 size=12218h ( 74264) load[0m
+[0;32mI (440) esp_image: segment 5: paddr=00107d00 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (478) app_init: Project name:     hello_world[0m
+[0;32mI (482) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  dedffee24...[0m
+[0;32mI (495) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB9100 len 00026F00 (155 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (562) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (590) main_task: Calling app_main()[0m
+[0;32mI (590) MAIN: ========== BOOT START ==========[0m
+[0;32mI (610) MAIN: NVS initialized[0m
+[0;32mI (610) MAIN: Firebase mutex created[0m
+[0;32mI (610) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc11a0, prio:23, stack:6656, core=0[0m
+[0;32mI (630) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (630) wifi:wifi certification version: v7.0[0m
+[0;32mI (630) wifi:config NVS flash: enabled[0m
+[0;32mI (630) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (640) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (640) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (660) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (670) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (800) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (800) wifi:enable tsf[0m
+[0;32mI (800) MAIN: WiFi initialization done[0m
+[0;32mI (800) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (840) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (840) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4110) wifi:state: auth -> init (0x200)[0m
+[0;32mI (4130) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4130) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (5800) OLED: Initializing OLED...[0m
+[0;32mI (5800) OLED: I2C initialized successfully[0m
+[0;32mI (5930) OLED: OLED initialized successfully[0m
+[0;32mI (5950) MAIN: Displayed login screen[0m
+[0;32mI (5950) POWER: Initializing power measurement module...[0m
+[0;32mI (5960) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5970) POWER: ACS712 channel 6 zero point: 2309.44 mV[0m
+[0;32mI (5970) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (5980) POWER: ACS712 channel 4 zero point: 2305.56 mV[0m
+[0;32mI (5980) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (5990) POWER: ZMPT101B channel 7 zero point: 2315.16 mV[0m
+[0;32mI (6000) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6010) POWER: ZMPT101B channel 5 zero point: 2311.72 mV[0m
+[0;32mI (6010) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6010) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6010) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[1;31mE (6020) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6030) esp-tls: Failed to open new connection[0m
+[1;31mE (6030) transport_base: Failed to open a new connection[0m
+[1;31mE (6040) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6040) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6050) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6060) esp-tls: Failed to open new connection[0m
+[1;31mE (6060) transport_base: Failed to open a new connection[0m
+[1;31mE (6070) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6070) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6080) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6090) esp-tls: Failed to open new connection[0m
+[1;31mE (6090) transport_base: Failed to open a new connection[0m
+[1;31mE (6100) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6100) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6110) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6120) esp-tls: Failed to open new connection[0m
+[1;31mE (6130) transport_base: Failed to open a new connection[0m
+[1;31mE (6130) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6130) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6140) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6150) esp-tls: Failed to open new connection[0m
+[1;31mE (6160) transport_base: Failed to open a new connection[0m
+[1;31mE (6160) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6160) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6170) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6180) esp-tls: Failed to open new connection[0m
+[1;31mE (6190) transport_base: Failed to open a new connection[0m
+[1;31mE (6190) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6200) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6200) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6210) esp-tls: Failed to open new connection[0m
+[1;31mE (6220) transport_base: Failed to open a new connection[0m
+[1;31mE (6220) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6230) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6230) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6240) esp-tls: Failed to open new connection[0m
+[1;31mE (6250) transport_base: Failed to open a new connection[0m
+[1;31mE (6250) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6260) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6260) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6270) esp-tls: Failed to open new connection[0m
+[1;31mE (6280) transport_base: Failed to open a new connection[0m
+[1;31mE (6280) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6290) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6290) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6300) esp-tls: Failed to open new connection[0m
+[1;31mE (6310) transport_base: Failed to open a new connection[0m
+[1;31mE (6310) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6320) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6320) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6330) esp-tls: Failed to open new connection[0m
+[1;31mE (6340) transport_base: Failed to open a new connection[0m
+[1;31mE (6340) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6350) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6350) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6360) esp-tls: Failed to open new connection[0m
+[1;31mE (6370) transport_base: Failed to open a new connection[0m
+[1;31mE (6370) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6380) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6380) FIREBASE: Firebase initialized successfully[0m
+[0;32mI (6390) MAIN: System initialization completed[0m
+[0;32mI (6390) MAIN: Firebase task started[0m
+[1;31mE (6400) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (6400) MAIN: Main task started[0m
+[1;31mE (6410) esp-tls: Failed to open new connection[0m
+[0;32mI (6400) MAIN: ========== BOOT DONE ==========[0m
+[1;31mE (6410) transport_base: Failed to open a new connection[0m
+[1;31mE (6420) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6430) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6430) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (6440) MAIN: Displayed login screen[0m
+[1;31mE (6450) esp-tls: Failed to open new connection[0m
+[1;31mE (6450) transport_base: Failed to open a new connection[0m
+[1;31mE (6460) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6460) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6470) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6480) esp-tls: Failed to open new connection[0m
+[1;31mE (6480) transport_base: Failed to open a new connection[0m
+[1;31mE (6490) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6490) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6500) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6510) esp-tls: Failed to open new connection[0m
+[1;31mE (6510) transport_base: Failed to open a new connection[0m
+[1;31mE (6520) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6520) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6530) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6540) esp-tls: Failed to open new connection[0m
+[1;31mE (6540) transport_base: Failed to open a new connection[0m
+[0;32mI (6550) MAIN: WiFi disconnected, reconnecting...[0m
+[1;31mE (6550) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6560) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6430) main_task: Returned from app_main()[0m
+[0;32mI (6570) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (6570) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (7350) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7350) esp-tls: Failed to open new connection[0m
+[1;31mE (7810) transport_base: Failed to open a new connection[0m
+[1;31mE (7810) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7810) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7820) wifi:state: auth -> assoc (0x0)[0m
+[1;31mE (7830) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (7830) wifi:state: assoc -> run (0x10)[0m
+[1;31mE (7840) esp-tls: Failed to open new connection[0m
+[1;31mE (7840) transport_base: Failed to open a new connection[0m
+[1;31mE (7850) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7850) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7860) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (7860) wifi:connected with Redmi Note 14, aid = 1, channel 13, BW20, bssid = fe:43:21:0d:9b:1d[0m
+[0;32mI (7880) wifi:security: WPA3-SAE, phy: bgn, rssi: -24[0m
+[0;32mI (7880) wifi:pm start, type: 1[0m
+
+[0;32mI (7880) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[1;31mE (7890) esp-tls: Failed to open new connection[0m
+[1;31mE (7900) transport_base: Failed to open a new connection[0m
+[0;32mI (7900) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (7910) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[1;31mE (7920) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7920) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7930) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7940) esp-tls: Failed to open new connection[0m
+[1;31mE (7940) transport_base: Failed to open a new connection[0m
+[1;31mE (7940) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7950) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8930) esp_netif_handlers: sta ip: 10.11.45.188, mask: 255.255.255.0, gw: 10.11.45.156[0m
+[0;32mI (8930) MAIN: WiFi connected, IP: 10.11.45.188[0m
+[0;32mI (11430) wifi:<ba-add>idx:0 (ifx:0, fe:43:21:0d:9b:1d), tid:3, ssn:16, winSize:64[0m
+[0;32mI (48800) FIREBASE: login flag -> true[0m
+[0;32mI (48810) MAIN: Login requested[0m
+[0;32mI (48810) LOGIN: Login request received[0m
+[0;32mI (48810) LOGIN: Creating RFID scan task...[0m
+[0;32mI (48810) LOGIN: RFID scan task started[0m
+[0;32mI (48810) RFID: Initializing RFID...[0m
+[0;32mI (48810) LOGIN: RFID scan task created successfully[0m
+[0;32mI (48850) MAIN: Displayed login screen[0m
+[0;32mI (48880) RFID: SPI initialized for RFID[0m
+[0;32mI (48930) RFID: MFRC522 version: 0x82[0m
+[0;32mI (48930) RFID: RFID initialized successfully[0m
+[0;32mI (48930) LOGIN: RFID initialized, waiting for card...[0m
+[0;33mW (50830) RFID: Anticollision timeout[0m
+[0;32mI (50850) LOGIN: Card detected: UID=0A:4E:17:05[0m
+[0;32mI (50850) LOGIN: Valid UID detected[0m
+[0;32mI (50870) LOGIN: Login successful with UID: 0A:4E:17:05[0m
+[0;32mI (50870) RFID: RFID deinitialized[0m
+[0;32mI (50870) LOGIN: RFID deinitialized[0m
+[0;32mI (55220) LOGIN: Loaded energy for UID=0A:4E:17:05: E1=0.930, E2=0.888[0m
+[0;32mI (59110) LOGIN: Relays turned ON[0m
+[0;32mI (63200) LOGIN: Relay status updated to 1[0m
+[0;32mI (63360) MAIN: Relay1: 1 | Dev1: I=1.337 V=53.8 P=71.94 E=0.010[0m
+[0;32mI (63370) MAIN: Relay2: 1 | Dev2: I=1.342 V=50.9 P=68.26 E=0.009[0m
+[0;32mI (63370) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (63960) MAIN: Relay1: 1 | Dev1: I=0.486 V=24.0 P=11.69 E=0.012[0m
+[0;32mI (63980) MAIN: Relay2: 1 | Dev2: I=0.442 V=18.9 P=8.34 E=0.011[0m
+[0;32mI (63980) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (64440) MAIN: Relay1: 1 | Dev1: I=0.503 V=24.1 P=12.15 E=0.013[0m
+[0;32mI (64440) MAIN: Relay2: 1 | Dev2: I=1.461 V=54.3 P=79.33 E=0.022[0m
+[0;32mI (64440) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (64850) MAIN: Relay1: 1 | Dev1: I=0.480 V=18.5 P=8.87 E=0.015[0m
+[0;32mI (64860) MAIN: Relay2: 1 | Dev2: I=0.437 V=68.1 P=29.76 E=0.026[0m
+[0;32mI (64860) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (65360) MAIN: Relay1: 1 | Dev1: I=0.788 V=67.3 P=52.99 E=0.022[0m
+[0;32mI (65360) MAIN: Relay2: 1 | Dev2: I=0.456 V=0.0 P=0.00 E=0.026[0m
+[0;32mI (65360) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (65860) MAIN: Relay1: 1 | Dev1: I=0.478 V=11.0 P=5.28 E=0.023[0m
+[0;32mI (65860) MAIN: Relay2: 1 | Dev2: I=0.436 V=24.3 P=10.59 E=0.027[0m
+[0;32mI (65860) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (66360) MAIN: Relay1: 1 | Dev1: I=0.536 V=64.0 P=34.28 E=0.027[0m
+[0;32mI (66360) MAIN: Relay2: 1 | Dev2: I=0.579 V=19.8 P=11.47 E=0.029[0m
+[0;32mI (66360) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (66850) MAIN: Relay1: 1 | Dev1: I=0.484 V=14.6 P=7.07 E=0.028[0m
+[0;32mI (66860) MAIN: Relay2: 1 | Dev2: I=0.436 V=18.3 P=8.00 E=0.030[0m
+[0;32mI (66860) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (67210) LOGIN: Login completed successfully[0m
+[0;32mI (67210) LOGIN: User: 0A:4E:17:05, E1=0.028, E2=0.030[0m
+[0;32mI (67210) LOGIN: RFID scan task completed, deleting...[0m
+[0;32mI (67360) MAIN: Relay1: 1 | Dev1: I=1.343 V=51.4 P=69.07 E=0.038[0m
+[0;32mI (67360) MAIN: Relay2: 1 | Dev2: I=0.929 V=0.0 P=0.00 E=0.030[0m
+[0;32mI (67360) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (67850) MAIN: Relay1: 1 | Dev1: I=0.473 V=17.7 P=8.36 E=0.039[0m
+[0;32mI (67860) MAIN: Relay2: 1 | Dev2: I=0.435 V=17.8 P=7.75 E=0.031[0m
+[0;32mI (67860) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (68290) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (68290) MAIN: Relay2: 1 | Dev2: I=0.194 V=11.3 P=2.19 E=0.031[0m
+[0;32mI (68290) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (68790) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (68790) MAIN: Relay2: 1 | Dev2: I=0.165 V=13.3 P=2.20 E=0.032[0m
+[0;32mI (68790) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (69280) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (69290) MAIN: Relay2: 1 | Dev2: I=0.180 V=16.4 P=2.95 E=0.032[0m
+[0;32mI (69290) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (69790) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (69790) MAIN: Relay2: 1 | Dev2: I=0.254 V=45.0 P=11.42 E=0.034[0m
+[0;32mI (69790) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (70220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (70220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (70220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (70720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (70720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (70720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (71220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (71220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (71220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (71720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (71720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (71720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (72220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (72220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (72220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (72720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (72720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (72720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (73220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (73220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (73220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (73720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (73720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (73720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (74220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (74220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (74220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (74720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (74720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (74720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (75220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (75220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (75220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (75720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (75720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (75720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (76220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (76220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (76220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (76720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (76720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (76720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (77220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (77220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (77220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (77720) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (77720) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (77720) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (78220) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (78220) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (78220) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (78930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (78940) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (78940) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (79430) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (79430) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (79430) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (79930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (79930) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (79930) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (80430) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (80430) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (80430) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (80930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (80930) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (80930) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (81430) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (81430) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (81430) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (81900) FIREBASE: User 0A:4E:17:05 saved: E1=0.039, E2=0.034, E=0.073[0m
+[0;32mI (81930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (81930) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (81930) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (82430) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (82430) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (82430) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (82930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (82930) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (82930) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (83430) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (83430) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (83430) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (83930) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.039[0m
+[0;32mI (83930) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (83930) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (84300) FIREBASE: dev1/Status changed -> 1[0m
+[0;32mI (84500) MAIN: Relay1: 1 | Dev1: I=0.710 V=32.9 P=23.35 E=0.042[0m
+[0;32mI (84500) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (84500) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (84990) MAIN: Relay1: 1 | Dev1: I=0.110 V=10.4 P=1.15 E=0.043[0m
+[0;32mI (85000) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (85000) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (85500) MAIN: Relay1: 1 | Dev1: I=0.939 V=50.3 P=47.23 E=0.049[0m
+[0;32mI (85500) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (85500) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (86000) MAIN: Relay1: 1 | Dev1: I=0.135 V=14.4 P=1.94 E=0.049[0m
+[0;32mI (86000) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.034[0m
+[0;32mI (86000) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (86210) FIREBASE: dev2/Status changed -> 1[0m
+[0;32mI (86570) MAIN: Relay1: 1 | Dev1: I=1.424 V=61.6 P=87.70 E=0.062[0m
+[0;32mI (86570) MAIN: Relay2: 1 | Dev2: I=1.410 V=56.2 P=79.31 E=0.045[0m
+[0;32mI (86570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (87070) MAIN: Relay1: 1 | Dev1: I=0.869 V=56.3 P=48.99 E=0.068[0m
+[0;32mI (87070) MAIN: Relay2: 1 | Dev2: I=0.449 V=14.5 P=6.51 E=0.046[0m
+[0;32mI (87070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (87570) MAIN: Relay1: 1 | Dev1: I=0.496 V=18.2 P=9.04 E=0.070[0m
+[0;32mI (87570) MAIN: Relay2: 1 | Dev2: I=0.459 V=31.0 P=14.22 E=0.048[0m
+[0;32mI (87570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (88070) MAIN: Relay1: 1 | Dev1: I=0.490 V=66.4 P=32.54 E=0.074[0m
+[0;32mI (88070) MAIN: Relay2: 1 | Dev2: I=1.423 V=76.8 P=109.25 E=0.063[0m
+[0;32mI (88070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (88570) MAIN: Relay1: 1 | Dev1: I=1.401 V=61.3 P=85.88 E=0.086[0m
+[0;32mI (88570) MAIN: Relay2: 1 | Dev2: I=0.450 V=12.0 P=5.39 E=0.063[0m
+[0;32mI (88570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (89070) MAIN: Relay1: 1 | Dev1: I=0.495 V=23.8 P=11.80 E=0.088[0m
+[0;32mI (89070) MAIN: Relay2: 1 | Dev2: I=1.386 V=80.0 P=110.95 E=0.079[0m
+[0;32mI (89070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (89560) MAIN: Relay1: 1 | Dev1: I=0.499 V=18.5 P=9.21 E=0.089[0m
+[0;32mI (89570) MAIN: Relay2: 1 | Dev2: I=0.447 V=21.8 P=9.76 E=0.080[0m
+[0;32mI (89570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (90070) MAIN: Relay1: 1 | Dev1: I=0.498 V=14.8 P=7.39 E=0.090[0m
+[0;32mI (90070) MAIN: Relay2: 1 | Dev2: I=0.550 V=15.3 P=8.40 E=0.081[0m
+[0;32mI (90070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (90570) MAIN: Relay1: 1 | Dev1: I=1.310 V=48.5 P=63.58 E=0.099[0m
+[0;32mI (90570) MAIN: Relay2: 1 | Dev2: I=0.447 V=11.3 P=5.03 E=0.082[0m
+[0;32mI (90570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (91060) MAIN: Relay1: 1 | Dev1: I=0.484 V=15.9 P=7.68 E=0.100[0m
+[0;32mI (91070) MAIN: Relay2: 1 | Dev2: I=0.447 V=65.2 P=29.13 E=0.086[0m
+[0;32mI (91070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (91570) MAIN: Relay1: 1 | Dev1: I=0.699 V=60.3 P=42.15 E=0.106[0m
+[0;32mI (91570) MAIN: Relay2: 1 | Dev2: I=0.446 V=15.2 P=6.76 E=0.087[0m
+[0;32mI (91570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (92060) MAIN: Relay1: 1 | Dev1: I=0.494 V=17.7 P=8.75 E=0.107[0m
+[0;32mI (92070) MAIN: Relay2: 1 | Dev2: I=0.449 V=21.4 P=9.59 E=0.088[0m
+[0;32mI (92070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (92570) MAIN: Relay1: 1 | Dev1: I=0.493 V=57.0 P=28.14 E=0.111[0m
+[0;32mI (92570) MAIN: Relay2: 1 | Dev2: I=1.416 V=56.6 P=80.19 E=0.100[0m
+[0;32mI (92570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (93070) MAIN: Relay1: 1 | Dev1: I=1.387 V=62.2 P=86.25 E=0.123[0m
+[0;32mI (93070) MAIN: Relay2: 1 | Dev2: I=1.405 V=75.1 P=105.44 E=0.114[0m
+[0;32mI (93070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (93570) MAIN: Relay1: 1 | Dev1: I=0.485 V=20.5 P=9.94 E=0.124[0m
+[0;32mI (93570) MAIN: Relay2: 1 | Dev2: I=1.268 V=62.5 P=79.21 E=0.125[0m
+[0;32mI (93570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (94060) MAIN: Relay1: 1 | Dev1: I=0.496 V=17.4 P=8.64 E=0.125[0m
+[0;32mI (94070) MAIN: Relay2: 1 | Dev2: I=0.448 V=20.5 P=9.18 E=0.126[0m
+[0;32mI (94070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (94570) MAIN: Relay1: 1 | Dev1: I=1.381 V=65.8 P=90.94 E=0.138[0m
+[0;32mI (94570) MAIN: Relay2: 1 | Dev2: I=0.578 V=0.0 P=0.00 E=0.126[0m
+[0;32mI (94570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (95070) MAIN: Relay1: 1 | Dev1: I=1.186 V=60.9 P=72.25 E=0.148[0m
+[0;32mI (95070) MAIN: Relay2: 1 | Dev2: I=1.373 V=65.7 P=90.20 E=0.139[0m
+[0;32mI (95070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (95560) MAIN: Relay1: 1 | Dev1: I=0.492 V=16.3 P=8.03 E=0.149[0m
+[0;32mI (95570) MAIN: Relay2: 1 | Dev2: I=0.447 V=58.0 P=25.94 E=0.143[0m
+[0;32mI (95570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (96070) MAIN: Relay1: 1 | Dev1: I=0.554 V=63.6 P=35.25 E=0.154[0m
+[0;32mI (96070) MAIN: Relay2: 1 | Dev2: I=0.453 V=15.5 P=7.04 E=0.144[0m
+[0;32mI (96070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (96560) MAIN: Relay1: 1 | Dev1: I=0.492 V=16.8 P=8.28 E=0.155[0m
+[0;32mI (96570) MAIN: Relay2: 1 | Dev2: I=0.445 V=20.6 P=9.18 E=0.145[0m
+[0;32mI (96570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (97070) MAIN: Relay1: 1 | Dev1: I=0.480 V=28.5 P=13.65 E=0.157[0m
+[0;32mI (97070) MAIN: Relay2: 1 | Dev2: I=0.448 V=18.7 P=8.37 E=0.146[0m
+[0;32mI (97070) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (97560) MAIN: Relay1: 1 | Dev1: I=0.489 V=16.1 P=7.89 E=0.158[0m
+[0;32mI (97570) MAIN: Relay2: 1 | Dev2: I=0.446 V=20.7 P=9.23 E=0.147[0m
+[0;32mI (97570) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (98290) MAIN: Relay1: 1 | Dev1: I=1.494 V=56.7 P=84.69 E=0.170[0m
+[0;32mI (98290) MAIN: Relay2: 1 | Dev2: I=1.389 V=81.1 P=112.73 E=0.163[0m
+[0;32mI (98290) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (98780) MAIN: Relay1: 1 | Dev1: I=1.463 V=58.3 P=85.37 E=0.182[0m
+[0;32mI (98780) MAIN: Relay2: 1 | Dev2: I=1.401 V=58.7 P=82.29 E=0.174[0m
+[0;32mI (98780) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (99100) FIREBASE: User 0A:4E:17:05 saved: E1=0.111, E2=0.100, E=0.210[0m
+[0;32mI (99270) MAIN: Relay1: 1 | Dev1: I=1.401 V=60.7 P=84.98 E=0.194[0m
+[0;32mI (99270) MAIN: Relay2: 1 | Dev2: I=0.446 V=69.8 P=31.13 E=0.179[0m
+[0;32mI (99270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (99770) MAIN: Relay1: 1 | Dev1: I=0.939 V=54.8 P=51.42 E=0.201[0m
+[0;32mI (99770) MAIN: Relay2: 1 | Dev2: I=0.441 V=12.2 P=5.39 E=0.179[0m
+[0;32mI (99770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (100270) MAIN: Relay1: 1 | Dev1: I=0.494 V=17.4 P=8.60 E=0.202[0m
+[0;32mI (100270) MAIN: Relay2: 1 | Dev2: I=0.450 V=38.7 P=17.43 E=0.182[0m
+[0;32mI (100270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (100770) MAIN: Relay1: 1 | Dev1: I=1.379 V=59.6 P=82.25 E=0.213[0m
+[0;32mI (100770) MAIN: Relay2: 1 | Dev2: I=0.445 V=0.0 P=0.00 E=0.182[0m
+[0;32mI (100770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (101270) MAIN: Relay1: 1 | Dev1: I=1.392 V=54.4 P=75.71 E=0.224[0m
+[0;32mI (101270) MAIN: Relay2: 1 | Dev2: I=1.082 V=0.0 P=0.00 E=0.182[0m
+[0;32mI (101270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (101500) FIREBASE: dev1/Status changed -> 0[0m
+[0;32mI (101700) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (101700) MAIN: Relay2: 1 | Dev2: I=0.189 V=17.0 P=3.22 E=0.182[0m
+[0;32mI (101700) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (102200) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (102200) MAIN: Relay2: 1 | Dev2: I=0.680 V=50.0 P=34.00 E=0.187[0m
+[0;32mI (102200) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (102690) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (102700) MAIN: Relay2: 1 | Dev2: I=0.139 V=11.3 P=1.57 E=0.187[0m
+[0;32mI (102700) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (103200) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (103200) MAIN: Relay2: 1 | Dev2: I=0.629 V=38.0 P=23.91 E=0.191[0m
+[0;32mI (103200) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (103700) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (103700) MAIN: Relay2: 1 | Dev2: I=0.825 V=54.2 P=44.75 E=0.197[0m
+[0;32mI (103700) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (103720) FIREBASE: dev2/Status changed -> 0[0m
+[0;32mI (104130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (104130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (104130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (104630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (104630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (104630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (105130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (105130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (105130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (105630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (105630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (105630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (106130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (106130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (106130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (106630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (106630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (106630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (107130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (107130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (107130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (107630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (107630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (107630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (108130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (108130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (108130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (108630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (108630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (108630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (109130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (109130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (109130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (109630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (109630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (109630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (110130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (110130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (110130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (110630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (110630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (110630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (111130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (111130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (111130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (111630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (111630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (111630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (112130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (112130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (112130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (112810) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (112830) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (112830) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (113310) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (113310) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (113310) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (113810) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (113810) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (113810) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (114310) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (114310) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (114310) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (115130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (115140) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (115140) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (115630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (115640) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (115640) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (116100) FIREBASE: User 0A:4E:17:05 saved: E1=0.224, E2=0.197, E=0.421[0m
+[0;32mI (116130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (116130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (116130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (116630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (116630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (116630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (117130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (117130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (117130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (117630) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (117630) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (117630) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (118130) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.224[0m
+[0;32mI (118130) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (118130) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (118300) FIREBASE: dev1/Status changed -> 1[0m
+[0;32mI (118700) MAIN: Relay1: 1 | Dev1: I=0.151 V=19.8 P=3.00 E=0.224[0m
+[0;32mI (118700) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (118700) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (119190) MAIN: Relay1: 1 | Dev1: I=0.152 V=11.4 P=1.74 E=0.225[0m
+[0;32mI (119200) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (119200) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (119690) MAIN: Relay1: 1 | Dev1: I=0.161 V=0.0 P=0.00 E=0.225[0m
+[0;32mI (119700) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (119700) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (120200) MAIN: Relay1: 1 | Dev1: I=0.650 V=35.0 P=22.78 E=0.228[0m
+[0;32mI (120200) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.197[0m
+[0;32mI (120200) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (120220) FIREBASE: dev2/Status changed -> 1[0m
+[0;32mI (120770) MAIN: Relay1: 1 | Dev1: I=1.397 V=51.9 P=72.51 E=0.238[0m
+[0;32mI (120770) MAIN: Relay2: 1 | Dev2: I=0.476 V=64.9 P=30.91 E=0.201[0m
+[0;32mI (120770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (121270) MAIN: Relay1: 1 | Dev1: I=0.841 V=55.1 P=46.36 E=0.244[0m
+[0;32mI (121270) MAIN: Relay2: 1 | Dev2: I=0.445 V=12.8 P=5.70 E=0.202[0m
+[0;32mI (121270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (121760) MAIN: Relay1: 1 | Dev1: I=0.493 V=17.9 P=8.84 E=0.245[0m
+[0;32mI (121770) MAIN: Relay2: 1 | Dev2: I=0.447 V=27.2 P=12.16 E=0.204[0m
+[0;32mI (121770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (122270) MAIN: Relay1: 1 | Dev1: I=0.489 V=64.4 P=31.49 E=0.250[0m
+[0;32mI (122270) MAIN: Relay2: 1 | Dev2: I=1.408 V=56.9 P=80.07 E=0.215[0m
+[0;32mI (122270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (122770) MAIN: Relay1: 1 | Dev1: I=1.368 V=54.2 P=74.15 E=0.260[0m
+[0;32mI (122770) MAIN: Relay2: 1 | Dev2: I=1.389 V=75.1 P=104.30 E=0.229[0m
+[0;32mI (122770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (123270) MAIN: Relay1: 1 | Dev1: I=0.485 V=20.5 P=9.94 E=0.262[0m
+[0;32mI (123270) MAIN: Relay2: 1 | Dev2: I=1.363 V=59.6 P=81.28 E=0.240[0m
+[0;32mI (123270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (123760) MAIN: Relay1: 1 | Dev1: I=0.492 V=16.3 P=8.02 E=0.263[0m
+[0;32mI (123770) MAIN: Relay2: 1 | Dev2: I=0.441 V=20.2 P=8.88 E=0.242[0m
+[0;32mI (123770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (124270) MAIN: Relay1: 1 | Dev1: I=0.482 V=14.9 P=7.18 E=0.264[0m
+[0;32mI (124270) MAIN: Relay2: 1 | Dev2: I=0.564 V=14.6 P=8.23 E=0.243[0m
+[0;32mI (124270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (124770) MAIN: Relay1: 1 | Dev1: I=1.256 V=49.3 P=61.90 E=0.272[0m
+[0;32mI (124770) MAIN: Relay2: 1 | Dev2: I=0.440 V=11.1 P=4.88 E=0.244[0m
+[0;32mI (124770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (125260) MAIN: Relay1: 1 | Dev1: I=0.476 V=15.8 P=7.53 E=0.273[0m
+[0;32mI (125270) MAIN: Relay2: 1 | Dev2: I=0.442 V=62.8 P=27.78 E=0.247[0m
+[0;32mI (125270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (125770) MAIN: Relay1: 1 | Dev1: I=0.679 V=60.4 P=41.05 E=0.279[0m
+[0;32mI (125770) MAIN: Relay2: 1 | Dev2: I=0.440 V=14.0 P=6.17 E=0.248[0m
+[0;32mI (125770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (126270) MAIN: Relay1: 1 | Dev1: I=1.354 V=49.6 P=67.11 E=0.288[0m
+[0;32mI (126270) MAIN: Relay2: 1 | Dev2: I=0.444 V=11.8 P=5.26 E=0.249[0m
+[0;32mI (126270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (126770) MAIN: Relay1: 1 | Dev1: I=1.359 V=53.6 P=72.87 E=0.298[0m
+[0;32mI (126770) MAIN: Relay2: 1 | Dev2: I=0.442 V=0.0 P=0.00 E=0.249[0m
+[0;32mI (126770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (127260) MAIN: Relay1: 1 | Dev1: I=0.472 V=14.8 P=6.97 E=0.299[0m
+[0;32mI (127270) MAIN: Relay2: 1 | Dev2: I=0.444 V=19.6 P=8.68 E=0.250[0m
+[0;32mI (127270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (127770) MAIN: Relay1: 1 | Dev1: I=0.486 V=16.8 P=8.17 E=0.301[0m
+[0;32mI (127770) MAIN: Relay2: 1 | Dev2: I=0.556 V=17.0 P=9.43 E=0.251[0m
+[0;32mI (127770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (128270) MAIN: Relay1: 1 | Dev1: I=1.365 V=64.0 P=87.35 E=0.313[0m
+[0;32mI (128270) MAIN: Relay2: 1 | Dev2: I=0.438 V=0.0 P=0.00 E=0.251[0m
+[0;32mI (128270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (128770) MAIN: Relay1: 1 | Dev1: I=1.432 V=56.5 P=80.93 E=0.324[0m
+[0;32mI (128770) MAIN: Relay2: 1 | Dev2: I=0.859 V=60.1 P=51.61 E=0.259[0m
+[0;32mI (128770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (129280) MAIN: Relay1: 1 | Dev1: I=1.279 V=57.5 P=73.62 E=0.334[0m
+[0;32mI (129280) MAIN: Relay2: 1 | Dev2: I=1.213 V=74.1 P=89.93 E=0.271[0m
+[0;32mI (129280) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (129760) MAIN: Relay1: 1 | Dev1: I=0.246 V=11.0 P=2.72 E=0.335[0m
+[0;32mI (129770) MAIN: Relay2: 1 | Dev2: I=0.417 V=49.0 P=20.41 E=0.274[0m
+[0;32mI (129770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (130270) MAIN: Relay1: 1 | Dev1: I=0.351 V=55.8 P=19.57 E=0.337[0m
+[0;32mI (130270) MAIN: Relay2: 1 | Dev2: I=0.391 V=0.0 P=0.00 E=0.274[0m
+[0;32mI (130270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (130760) MAIN: Relay1: 1 | Dev1: I=0.252 V=0.0 P=0.00 E=0.337[0m
+[0;32mI (130770) MAIN: Relay2: 1 | Dev2: I=0.392 V=11.0 P=4.31 E=0.275[0m
+[0;32mI (130770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (131270) MAIN: Relay1: 1 | Dev1: I=0.221 V=41.6 P=9.19 E=0.339[0m
+[0;32mI (131270) MAIN: Relay2: 1 | Dev2: I=1.186 V=50.5 P=59.93 E=0.283[0m
+[0;32mI (131270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (131760) MAIN: Relay1: 1 | Dev1: I=0.250 V=10.8 P=2.70 E=0.339[0m
+[0;32mI (131770) MAIN: Relay2: 1 | Dev2: I=0.375 V=10.7 P=4.01 E=0.283[0m
+[0;32mI (131770) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (132270) MAIN: Relay1: 1 | Dev1: I=0.229 V=12.1 P=2.76 E=0.339[0m
+[0;32mI (132270) MAIN: Relay2: 1 | Dev2: I=0.963 V=56.3 P=54.22 E=0.291[0m
+[0;32mI (132270) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (132760) MAIN: Relay1: 1 | Dev1: I=0.317 V=0.0 P=0.00 E=0.339[0m
+[0;32mI (132770) MAIN: Relay2: 1 | Dev2: I=0.411 V=11.3 P=4.64 E=0.292[0m
+[0;32mI (132770) MAIN: UID=0A:4E:17:05[0m

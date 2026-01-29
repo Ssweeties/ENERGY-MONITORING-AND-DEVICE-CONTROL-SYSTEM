@@ -1,0 +1,29 @@
+idf_component_register(
+    SRCS 
+        "main.c"
+        "components/firebase.c"
+        "components/power.c"
+        "components/OLED.c"
+        "components/login.c"
+        "components/logout.c"
+        "components/RFID.c"
+    INCLUDE_DIRS 
+        "."
+        "components"
+    PRIV_INCLUDE_DIRS
+        "."
+    PRIV_REQUIRES         
+        spi_flash
+        esp_driver_gpio
+        driver
+        esp_adc
+        esp_wifi
+        esp_event
+        nvs_flash
+        esp_http_client
+        json
+        esp-tls              
+        esp_https_ota        
+        mbedtls
+)
+target_compile_options(__idf_main PRIVATE -Wno-deprecated-declarations)

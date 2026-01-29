@@ -1,0 +1,924 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\DA2\hello_world\build\hello_world.elf D:\DA2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=333c4h (209860) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000433ec vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=000474b0 vaddr=40080000 size=08b68h ( 35688) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5abch (678588) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f5ae4 vaddr=40088b68 size=12218h ( 74264) load[0m
+[0;32mI (440) esp_image: segment 5: paddr=00107d04 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (478) app_init: Project name:     hello_world[0m
+[0;32mI (482) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  3ebef23da...[0m
+[0;32mI (495) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (517) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB9100 len 00026F00 (155 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (545) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (550) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (562) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (590) main_task: Calling app_main()[0m
+[0;32mI (590) MAIN: ========== BOOT START ==========[0m
+[0;32mI (610) MAIN: NVS initialized[0m
+[0;32mI (610) MAIN: Firebase mutex created[0m
+[0;32mI (610) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc1224, prio:23, stack:6656, core=0[0m
+[0;32mI (630) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (630) wifi:wifi certification version: v7.0[0m
+[0;32mI (630) wifi:config NVS flash: enabled[0m
+[0;32mI (630) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (640) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (640) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (660) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (670) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (790) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (810) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (810) wifi:enable tsf[0m
+[0;32mI (810) MAIN: WiFi initialization done[0m
+[0;32mI (810) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (870) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (870) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2140) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2150) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (3240) wifi:connected with Redmi Note 14, aid = 1, channel 13, BW20, bssid = de:3c:be:ce:ca:8b[0m
+[0;32mI (3240) wifi:security: WPA3-SAE, phy: bgn, rssi: -21[0m
+[0;32mI (3250) wifi:pm start, type: 1[0m
+
+[0;32mI (3250) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (3330) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (3330) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (4340) esp_netif_handlers: sta ip: 10.11.45.188, mask: 255.255.255.0, gw: 10.11.45.156[0m
+[0;32mI (4340) MAIN: WiFi connected, IP: 10.11.45.188[0m
+[0;32mI (5810) OLED: Initializing OLED...[0m
+[0;32mI (5810) OLED: I2C initialized successfully[0m
+[0;32mI (5940) OLED: OLED initialized successfully[0m
+[0;32mI (5960) MAIN: Displayed login screen[0m
+[0;32mI (5960) POWER: Initializing power measurement module...[0m
+[0;32mI (5970) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5980) POWER: ACS712 channel 6 zero point: 2385.52 mV[0m
+[0;32mI (5980) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (5990) POWER: ACS712 channel 4 zero point: 2316.80 mV[0m
+[0;32mI (5990) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (6010) POWER: ZMPT101B channel 7 zero point: 2264.28 mV[0m
+[0;32mI (6010) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6020) POWER: ZMPT101B channel 5 zero point: 2269.08 mV[0m
+[0;32mI (6020) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6020) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6020) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[0;32mI (8330) wifi:<ba-add>idx:0 (ifx:0, de:3c:be:ce:ca:8b), tid:3, ssn:16, winSize:64[0m
+
+***ERROR*** A stack overflow in task main has been detected.
+
+
+Backtrace: 0x4008abe1:0x3ffba3c0 0x4008aba9:0x3ffba3e0 0x4008bc4e:0x3ffba400 0x4008cf93:0x3ffba480 0x4008bd58:0x3ffba4a0 0x4008bd0a:0xa5a5a5a5 |<-CORRUPTED
+
+
+
+
+ELF file SHA256: 3ebef23da
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (27) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (31) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=333c4h (209860) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000433ec vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=000474b0 vaddr=40080000 size=08b68h ( 35688) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5abch (678588) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f5ae4 vaddr=40088b68 size=12218h ( 74264) load[0m
+[0;32mI (440) esp_image: segment 5: paddr=00107d04 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (453) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (453) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (472) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (472) cpu_start: Pro cpu start user code[0m
+[0;32mI (472) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (474) app_init: Application information:[0m
+[0;32mI (478) app_init: Project name:     hello_world[0m
+[0;32mI (482) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  3ebef23da...[0m
+[0;32mI (495) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB9100 len 00026F00 (155 KiB): DRAM[0m
+[0;32mI (527) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (532) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (538) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (547) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (562) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (580) main_task: Started on CPU0[0m
+[0;32mI (590) main_task: Calling app_main()[0m
+[0;32mI (590) MAIN: ========== BOOT START ==========[0m
+[0;32mI (610) MAIN: NVS initialized[0m
+[0;32mI (610) MAIN: Firebase mutex created[0m
+[0;32mI (610) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (620) wifi:wifi driver task: 3ffc1224, prio:23, stack:6656, core=0[0m
+[0;32mI (630) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (630) wifi:wifi certification version: v7.0[0m
+[0;32mI (630) wifi:config NVS flash: enabled[0m
+[0;32mI (630) wifi:config nano formatting: disabled[0m
+[0;32mI (640) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (640) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (640) wifi:Init management short buffer num: 32[0m
+[0;32mI (650) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (650) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (660) wifi:Init static rx buffer num: 10[0m
+[0;32mI (660) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (670) wifi_init: rx ba win: 6[0m
+[0;32mI (670) wifi_init: accept mbox: 6[0m
+[0;32mI (670) wifi_init: tcpip mbox: 32[0m
+[0;32mI (670) wifi_init: udp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp mbox: 6[0m
+[0;32mI (680) wifi_init: tcp tx win: 5760[0m
+[0;32mI (680) wifi_init: tcp rx win: 5760[0m
+[0;32mI (690) wifi_init: tcp mss: 1440[0m
+[0;32mI (690) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (690) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (700) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (710) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (800) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (800) wifi:enable tsf[0m
+[0;32mI (800) MAIN: WiFi initialization done[0m
+[0;32mI (800) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (810) wifi:new:<13,0>, old:<1,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (810) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4100) wifi:state: auth -> init (0x200)[0m
+[0;32mI (4110) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4110) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (5800) OLED: Initializing OLED...[0m
+[0;32mI (5800) OLED: I2C initialized successfully[0m
+[0;32mI (5930) OLED: OLED initialized successfully[0m
+[0;32mI (5950) MAIN: Displayed login screen[0m
+[0;32mI (5950) POWER: Initializing power measurement module...[0m
+[0;32mI (5960) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5970) POWER: ACS712 channel 6 zero point: 2316.60 mV[0m
+[0;32mI (5970) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (5980) POWER: ACS712 channel 4 zero point: 2311.84 mV[0m
+[0;32mI (5980) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (5990) POWER: ZMPT101B channel 7 zero point: 2320.80 mV[0m
+[0;32mI (5990) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6010) POWER: ZMPT101B channel 5 zero point: 2318.00 mV[0m
+[0;32mI (6010) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6010) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6010) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[1;31mE (6020) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6030) esp-tls: Failed to open new connection[0m
+[1;31mE (6030) transport_base: Failed to open a new connection[0m
+[1;31mE (6040) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6040) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6050) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6060) esp-tls: Failed to open new connection[0m
+[1;31mE (6060) transport_base: Failed to open a new connection[0m
+[1;31mE (6070) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6070) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6080) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6090) esp-tls: Failed to open new connection[0m
+[1;31mE (6090) transport_base: Failed to open a new connection[0m
+[1;31mE (6100) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6100) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6110) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6120) esp-tls: Failed to open new connection[0m
+[1;31mE (6130) transport_base: Failed to open a new connection[0m
+[1;31mE (6130) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6130) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6140) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6150) esp-tls: Failed to open new connection[0m
+[1;31mE (6160) transport_base: Failed to open a new connection[0m
+[1;31mE (6160) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6170) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6170) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6180) esp-tls: Failed to open new connection[0m
+[1;31mE (6190) transport_base: Failed to open a new connection[0m
+[1;31mE (6190) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6200) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6200) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6210) esp-tls: Failed to open new connection[0m
+[1;31mE (6220) transport_base: Failed to open a new connection[0m
+[1;31mE (6220) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6230) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6230) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6240) esp-tls: Failed to open new connection[0m
+[1;31mE (6250) transport_base: Failed to open a new connection[0m
+[1;31mE (6250) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6260) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6260) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6270) esp-tls: Failed to open new connection[0m
+[1;31mE (6280) transport_base: Failed to open a new connection[0m
+[1;31mE (6280) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6290) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6290) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6300) esp-tls: Failed to open new connection[0m
+[1;31mE (6310) transport_base: Failed to open a new connection[0m
+[1;31mE (6310) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6320) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6320) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6330) esp-tls: Failed to open new connection[0m
+[1;31mE (6340) transport_base: Failed to open a new connection[0m
+[1;31mE (6340) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6350) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6350) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6360) esp-tls: Failed to open new connection[0m
+[1;31mE (6370) transport_base: Failed to open a new connection[0m
+[1;31mE (6370) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6380) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6380) FIREBASE: Firebase initialized successfully[0m
+[0;32mI (6390) MAIN: System initialization completed[0m
+[0;32mI (6390) MAIN: Firebase task started[0m
+[1;31mE (6400) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (6400) MAIN: Main task started[0m
+[1;31mE (6410) esp-tls: Failed to open new connection[0m
+[0;32mI (6400) MAIN: ========== BOOT DONE ==========[0m
+[1;31mE (6410) transport_base: Failed to open a new connection[0m
+[1;31mE (6420) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6430) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6430) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (6440) MAIN: Displayed login screen[0m
+[1;31mE (6450) esp-tls: Failed to open new connection[0m
+[1;31mE (6450) transport_base: Failed to open a new connection[0m
+[1;31mE (6460) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6460) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6470) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6480) esp-tls: Failed to open new connection[0m
+[1;31mE (6480) transport_base: Failed to open a new connection[0m
+[1;31mE (6490) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6490) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6500) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6510) esp-tls: Failed to open new connection[0m
+[1;31mE (6510) transport_base: Failed to open a new connection[0m
+[1;31mE (6520) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6520) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6430) main_task: Returned from app_main()[0m
+[0;32mI (6530) MAIN: WiFi disconnected, reconnecting...[0m
+[1;31mE (6530) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6550) esp-tls: Failed to open new connection[0m
+[1;31mE (6550) transport_base: Failed to open a new connection[0m
+[1;31mE (6560) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6560) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6620) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (6630) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (7570) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7570) esp-tls: Failed to open new connection[0m
+[1;31mE (7570) transport_base: Failed to open a new connection[0m
+[1;31mE (7580) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7580) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7590) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7600) esp-tls: Failed to open new connection[0m
+[1;31mE (7600) transport_base: Failed to open a new connection[0m
+[1;31mE (7610) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7610) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7620) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7630) esp-tls: Failed to open new connection[0m
+[1;31mE (7630) transport_base: Failed to open a new connection[0m
+[1;31mE (7640) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7640) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7650) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7660) esp-tls: Failed to open new connection[0m
+[1;31mE (7660) transport_base: Failed to open a new connection[0m
+[1;31mE (7670) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7670) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7680) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7690) esp-tls: Failed to open new connection[0m
+[1;31mE (7690) transport_base: Failed to open a new connection[0m
+[1;31mE (7700) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7700) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8710) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8710) esp-tls: Failed to open new connection[0m
+[1;31mE (8710) transport_base: Failed to open a new connection[0m
+[1;31mE (8720) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8720) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8730) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8740) esp-tls: Failed to open new connection[0m
+[1;31mE (8740) transport_base: Failed to open a new connection[0m
+[1;31mE (8750) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8750) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8760) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8770) esp-tls: Failed to open new connection[0m
+[1;31mE (8770) transport_base: Failed to open a new connection[0m
+[1;31mE (8780) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8780) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8790) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8800) esp-tls: Failed to open new connection[0m
+[1;31mE (8800) transport_base: Failed to open a new connection[0m
+[1;31mE (8810) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8810) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8820) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8830) esp-tls: Failed to open new connection[0m
+[1;31mE (8830) transport_base: Failed to open a new connection[0m
+[1;31mE (8840) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8840) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9850) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9850) esp-tls: Failed to open new connection[0m
+[1;31mE (9850) transport_base: Failed to open a new connection[0m
+[1;31mE (9860) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9860) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9860) wifi:state: auth -> init (0x200)[0m
+[1;31mE (9870) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (9880) wifi:E (9880) esp-tls: Failed to open new connection[0m
+new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0E (9890) transport_base: Failed to open a new connection
+
+[1;31mE (9900) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (9900) MAIN: WiFi disconnected, reconnecting...[0m
+[1;31mE (9900) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9910) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9920) esp-tls: Failed to open new connection[0m
+[1;31mE (9930) transport_base: Failed to open a new connection[0m
+[1;31mE (9930) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9940) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9940) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9950) esp-tls: Failed to open new connection[0m
+[1;31mE (9960) transport_base: Failed to open a new connection[0m
+[1;31mE (9960) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9970) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9980) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9980) esp-tls: Failed to open new connection[0m
+[1;31mE (9990) transport_base: Failed to open a new connection[0m
+[1;31mE (9990) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10000) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11000) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11000) esp-tls: Failed to open new connection[0m
+[1;31mE (11000) transport_base: Failed to open a new connection[0m
+[1;31mE (11010) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11010) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11020) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11030) esp-tls: Failed to open new connection[0m
+[1;31mE (11030) transport_base: Failed to open a new connection[0m
+[1;31mE (11040) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11040) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11050) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11060) esp-tls: Failed to open new connection[0m
+[1;31mE (11060) transport_base: Failed to open a new connection[0m
+[1;31mE (11070) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11070) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11080) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11090) esp-tls: Failed to open new connection[0m
+[1;31mE (11090) transport_base: Failed to open a new connection[0m
+[1;31mE (11100) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11100) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11110) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11120) esp-tls: Failed to open new connection[0m
+[1;31mE (11130) transport_base: Failed to open a new connection[0m
+[1;31mE (11130) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11130) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+���������������������������������������������������������������� (12140) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0
+[1;31mE (12140) esp-tls: Failed to open new connection[0m
+[1;31mE (12140) transport_base: Failed to open a new connection[0m
+[1;31mE (12150) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12150) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12160) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12170) esp-tls: Failed to open new connection[0m
+[1;31mE (12170) transport_base: Failed to open a new connection[0m
+[1;31mE (12180) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12180) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12190) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12200) esp-tls: Failed to open new connection[0m
+[1;31mE (12200) transport_base: Failed to open a new connection[0m
+[1;31mE (12210) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12210) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12220) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12230) esp-tls: Failed to open new connection[0m
+[1;31mE (12230) transport_base: Failed to open a new connection[0m
+[1;31mE (12240) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12240) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12250) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12260) esp-tls: Failed to open new connection[0m
+[1;31mE (12260) transport_base: Failed to open a new connection[0m
+[1;31mE (12270) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12270) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (12330) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (12390) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (12390) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (13280) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (13280) esp-tls: Failed to open new connection[0m
+[1;31mE (13280) transport_base: Failed to open a new connection[0m
+[1;31mE (13290) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13290) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (13300) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (13310) esp-tls: Failed to open new connection[0m
+[1;31mE (13310) transport_base: Failed to open a new connection[0m
+[1;31mE (13320) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13320) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (13330) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (13340) esp-tls: Failed to open new connection[0m
+[1;31mE (13340) transport_base: Failed to open a new connection[0m
+[1;31mE (13350) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13350) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (13360) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (13370) esp-tls: Failed to open new connection[0m
+[1;31mE (13370) transport_base: Failed to open a new connection[0m
+[1;31mE (13380) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13380) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (13390) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (13400) esp-tls: Failed to open new connection[0m
+[1;31mE (13410) transport_base: Failed to open a new connection[0m
+[1;31mE (13410) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (13410) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (14420) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (14420) esp-tls: Failed to open new connection[0m
+[1;31mE (14420) transport_base: Failed to open a new connection[0m
+[1;31mE (14430) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14430) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (14440) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (14450) esp-tls: Failed to open new connection[0m
+[1;31mE (14450) transport_base: Failed to open a new connection[0m
+[1;31mE (14460) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14460) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (14470) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (14480) esp-tls: Failed to open new connection[0m
+[1;31mE (14480) transport_base: Failed to open a new connection[0m
+[1;31mE (14490) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14490) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (14500) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (14510) esp-tls: Failed to open new connection[0m
+[1;31mE (14510) transport_base: Failed to open a new connection[0m
+[1;31mE (14520) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14520) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (14530) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (14540) esp-tls: Failed to open new connection[0m
+[1;31mE (14540) transport_base: Failed to open a new connection[0m
+[1;31mE (14550) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (14550) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (15560) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15560) esp-tls: Failed to open new connection[0m
+[1;31mE (15560) transport_base: Failed to open a new connection[0m
+[1;31mE (15570) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15570) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (15580) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15590) esp-tls: Failed to open new connection[0m
+[1;31mE (15590) transport_base: Failed to open a new connection[0m
+[1;31mE (15600) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15600) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (15610) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15620) esp-tls: Failed to open new connection[0m
+[1;31mE (15620) transport_base: Failed to open a new connection[0m
+[1;31mE (15630) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (15630) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (15640) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (15650) esp-tls: Failed to open new connection[0m
+[1;31mE (15650) transport_base: Failed to open a new connection[0m
+[1;31mE (15660) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (15660) wifi:E (15660) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+state: auth -> init (0x200)
+[1;31mE (15670) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (15680) wifi:E (15680) esp-tls: Failed to open new connection[0m
+new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0E (15690) transport_base: Failed to open a new connection
+
+[1;31mE (15700) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (15700) MAIN: WiFi disconnected, reconnecting...[0m
+[1;31mE (15710) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16720) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (16720) esp-tls: Failed to open new connection[0m
+[1;31mE (16720) transport_base: Failed to open a new connection[0m
+[1;31mE (16730) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16730) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16740) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (16750) esp-tls: Failed to open new connection[0m
+[1;31mE (16750) transport_base: Failed to open a new connection[0m
+[1;31mE (16760) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16760) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16770) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (16780) esp-tls: Failed to open new connection[0m
+[1;31mE (16780) transport_base: Failed to open a new connection[0m
+[1;31mE (16790) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16790) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16800) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (16810) esp-tls: Failed to open new connection[0m
+[1;31mE (16810) transport_base: Failed to open a new connection[0m
+[1;31mE (16820) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16820) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (16830) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (16840) esp-tls: Failed to open new connection[0m
+[1;31mE (16840) transport_base: Failed to open a new connection[0m
+[1;31mE (16850) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (16850) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (17860) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (17860) esp-tls: Failed to open new connection[0m
+[1;31mE (17860) transport_base: Failed to open a new connection[0m
+[1;31mE (17870) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17870) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (17880) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (17890) esp-tls: Failed to open new connection[0m
+[1;31mE (17890) transport_base: Failed to open a new connection[0m
+[1;31mE (17900) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17900) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (17910) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (17920) esp-tls: Failed to open new connection[0m
+[1;31mE (17920) transport_base: Failed to open a new connection[0m
+[1;31mE (17930) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17930) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (17940) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (17950) esp-tls: Failed to open new connection[0m
+[1;31mE (17950) transport_base: Failed to open a new connection[0m
+[1;31mE (17960) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17960) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (17970) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (17980) esp-tls: Failed to open new connection[0m
+[1;31mE (17980) transport_base: Failed to open a new connection[0m
+[1;31mE (17990) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (17990) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (18130) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (18210) wifi:new:<13,0>, old:<13,0>, ap:<255,255>, sta:<13,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (18210) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (19000) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (19000) esp-tls: Failed to open new connection[0m
+[1;31mE (19000) transport_base: Failed to open a new connection[0m
+[1;31mE (19010) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19010) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (19020) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (19030) esp-tls: Failed to open new connection[0m
+[1;31mE (19030) transport_base: Failed to open a new connection[0m
+[1;31mE (19040) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19040) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (19050) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (19060) esp-tls: Failed to open new connection[0m
+[1;31mE (19060) transport_base: Failed to open a new connection[0m
+[1;31mE (19070) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19070) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (19080) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (19090) esp-tls: Failed to open new connection[0m
+[1;31mE (19090) transport_base: Failed to open a new connection[0m
+[1;31mE (19100) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19100) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (19110) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (19120) esp-tls: Failed to open new connection[0m
+[1;31mE (19130) transport_base: Failed to open a new connection[0m
+[1;31mE (19130) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (19130) FIREBASE: HTTP PATCH request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (19440) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (19450) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (19530) wifi:connected with Redmi Note 14, aid = 1, channel 13, BW20, bssid = de:3c:be:ce:ca:8b[0m
+[0;32mI (19530) wifi:security: WPA3-SAE, phy: bgn, rssi: -31[0m
+[0;32mI (19540) wifi:pm start, type: 1[0m
+
+[0;32mI (19540) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (19630) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (19630) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (20650) esp_netif_handlers: sta ip: 10.11.45.188, mask: 255.255.255.0, gw: 10.11.45.156[0m
+[0;32mI (20650) MAIN: WiFi connected, IP: 10.11.45.188[0m
+[0;32mI (22650) wifi:<ba-add>idx:0 (ifx:0, de:3c:be:ce:ca:8b), tid:3, ssn:16, winSize:64[0m
+[0;32mI (26720) FIREBASE: logout flag -> true[0m
+[0;32mI (26730) MAIN: Logout requested[0m
+[0;32mI (26730) LOGOUT: Logout request received[0m
+[0;32mI (26730) LOGOUT: Logout session: UID=, E1=0.000, E2=0.000[0m
+[0;33mW (26730) LOGOUT: No UID found, skipping user energy save[0m
+[0;32mI (26730) LOGOUT: Device data reset to 0[0m
+[0;32mI (28830) FIREBASE: login flag -> true[0m
+[0;32mI (33930) LOGOUT: Relays turned OFF[0m
+[0;32mI (37560) LOGOUT: Relay status updated to 0[0m
+[0;32mI (39430) LOGOUT: Logout completed successfully (last UID: )[0m
+[0;32mI (39440) MAIN: Login requested[0m
+[0;32mI (39440) LOGIN: Login request received[0m
+[0;32mI (39440) LOGIN: Creating RFID scan task...[0m
+[0;32mI (39440) LOGIN: RFID scan task created successfully[0m
+[0;32mI (39440) LOGIN: RFID scan task started[0m
+[0;32mI (39440) RFID: Initializing RFID...[0m
+[0;32mI (39470) MAIN: Displayed login screen[0m
+[0;32mI (39520) RFID: SPI initialized for RFID[0m
+[0;32mI (39570) RFID: MFRC522 version: 0x82[0m
+[0;32mI (39570) RFID: RFID initialized successfully[0m
+[0;32mI (39570) LOGIN: RFID initialized, waiting for card...[0m
+����������������������������������������������������������������(42490) RFID: Anticollision timeout
+[0;32mI (42510) LOGIN: Card detected: UID=0A:4E:17:05[0m
+[0;32mI (42510) LOGIN: Valid UID detected[0m
+[0;32mI (42530) LOGIN: Login successful with UID: 0A:4E:17:05[0m
+[0;32mI (42530) RFID: RFID deinitialized[0m
+[0;32mI (42530) LOGIN: RFID deinitialized[0m
+[0;32mI (46730) LOGIN: Loaded energy for UID=0A:4E:17:05: E1=0.298, E2=0.249[0m
+[0;32mI (50050) LOGIN: Relays turned ON[0m
+[0;32mI (53530) LOGIN: Relay status updated to 1[0m
+[0;32mI (53680) MAIN: Relay1: 1 | Dev1: I=1.359 V=58.8 P=79.84 E=0.022[0m
+[0;32mI (53680) MAIN: Relay2: 1 | Dev2: I=1.319 V=49.0 P=64.66 E=0.018[0m
+[0;32mI (53680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (54680) MAIN: Relay1: 1 | Dev1: I=1.229 V=53.8 P=66.13 E=0.041[0m
+[0;32mI (54680) MAIN: Relay2: 1 | Dev2: I=0.954 V=0.0 P=0.00 E=0.018[0m
+[0;32mI (54680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (55620) LOGIN: Login completed successfully[0m
+[0;32mI (55620) LOGIN: User: 0A:4E:17:05, E1=0.052, E2=0.018[0m
+[0;32mI (55620) LOGIN: RFID scan task completed, deleti...[0m
+[0;32mI (55680) MAIN: Relay1: 1 | Dev1: I=0.588 V=69.4 P=40.78 E=0.052[0m
+[0;32mI (55690) MAIN: Relay2: 1 | Dev2: I=1.335 V=51.1 P=68.21 E=0.037[0m
+[0;32mI (55690) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (56680) MAIN: Relay1: 1 | Dev1: I=0.611 V=59.0 P=36.06 E=0.062[0m
+[0;32mI (56680) MAIN: Relay2: 1 | Dev2: I=0.613 V=17.7 P=10.82 E=0.040[0m
+[0;32mI (56680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (57680) MAIN: Relay1: 1 | Dev1: I=0.377 V=15.3 P=5.75 E=0.063[0m
+[0;32mI (57680) MAIN: Relay2: 1 | Dev2: I=1.152 V=59.1 P=68.15 E=0.059[0m
+[0;32mI (57680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (58680) MAIN: Relay1: 1 | Dev1: I=0.989 V=62.8 P=62.12 E=0.081[0m
+[0;32mI (58680) MAIN: Relay2: 1 | Dev2: I=1.298 V=50.3 P=65.34 E=0.077[0m
+[0;32mI (58680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (59680) MAIN: Relay1: 1 | Dev1: I=1.313 V=52.5 P=68.99 E=0.100[0m
+[0;32mI (59680) MAIN: Relay2: 1 | Dev2: I=0.953 V=47.4 P=45.19 E=0.090[0m
+[0;32mI (59680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (60680) MAIN: Relay1: 1 | Dev1: I=1.306 V=52.0 P=67.92 E=0.119[0m
+[0;32mI (60680) MAIN: Relay2: 1 | Dev2: I=0.898 V=0.0 P=0.00 E=0.090[0m
+[0;32mI (60680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (61670) MAIN: Relay1: 1 | Dev1: I=0.372 V=11.2 P=4.18 E=0.120[0m
+[0;32mI (61680) MAIN: Relay2: 1 | Dev2: I=0.503 V=15.0 P=7.52 E=0.092[0m
+[0;32mI (61680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (62670) MAIN: Relay1: 1 | Dev1: I=0.433 V=13.2 P=5.70 E=0.122[0m
+[0;32mI (62680) MAIN: Relay2: 1 | Dev2: I=0.504 V=16.0 P=8.08 E=0.094[0m
+[0;32mI (62680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (63150) FIREBASE: User 0A:4E:17:05 saved: E1=0.063, E2=0.040, E=0.103[0m
+[0;32mI (63680) MAIN: Relay1: 1 | Dev1: I=0.944 V=61.8 P=58.35 E=0.138[0m
+[0;32mI (63680) MAIN: Relay2: 1 | Dev2: I=1.281 V=52.9 P=67.79 E=0.113[0m
+[0;32mI (63680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (64680) MAIN: Relay1: 1 | Dev1: I=0.387 V=66.2 P=25.62 E=0.145[0m
+[0;32mI (64680) MAIN: Relay2: 1 | Dev2: I=1.389 V=68.6 P=95.27 E=0.139[0m
+[0;32mI (64680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (65680) MAIN: Relay1: 1 | Dev1: I=0.406 V=32.4 P=13.16 E=0.149[0m
+[0;32mI (65680) MAIN: Relay2: 1 | Dev2: I=1.306 V=54.8 P=71.64 E=0.159[0m
+[0;32mI (65680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (66600) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (66610) MAIN: Relay2: 1 | Dev2: I=0.000 V=11.9 P=0.00 E=0.159[0m
+[0;32mI (66610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (67610) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (67610) MAIN: Relay2: 1 | Dev2: I=0.580 V=49.2 P=28.58 E=0.167[0m
+[0;32mI (67610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (68540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (68540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (68540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (69540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (69540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (69540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (70540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (70540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (70540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (71540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (71540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (71540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (72540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (72540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (72540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (73540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (73540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (73540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (74540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (74540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (74540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (75540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (75540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (75540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (76540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (76540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (76540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (77540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (77540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (77540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (78540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (78540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (78540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (79540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (79540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (79540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (79540) FIREBASE: User 0A:4E:17:05 saved: E1=0.149, E2=0.167, E=0.316[0m
+[0;32mI (80540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (80540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (80540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (81540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (81540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (81540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (82540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.149[0m
+[0;32mI (82540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (82540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (82620) FIREBASE: dev1/Status changed -> 1[0m
+[0;32mI (83610) MAIN: Relay1: 1 | Dev1: I=0.736 V=53.5 P=39.36 E=0.159[0m
+[0;32mI (83610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.167[0m
+[0;32mI (83610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (84460) FIREBASE: dev2/Status changed -> 1[0m
+[0;32mI (84680) MAIN: Relay1: 1 | Dev1: I=1.434 V=71.2 P=102.02 E=0.188[0m
+[0;32mI (84680) MAIN: Relay2: 1 | Dev2: I=0.922 V=63.3 P=58.40 E=0.183[0m
+[0;32mI (84680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (85680) MAIN: Relay1: 1 | Dev1: I=0.615 V=25.2 P=15.49 E=0.192[0m
+[0;32mI (85680) MAIN: Relay2: 1 | Dev2: I=0.577 V=67.9 P=39.18 E=0.194[0m
+[0;32mI (85680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (86680) MAIN: Relay1: 1 | Dev1: I=1.320 V=49.8 P=65.77 E=0.210[0m
+[0;32mI (86680) MAIN: Relay2: 1 | Dev2: I=0.989 V=0.0 P=0.00 E=0.194[0m
+[0;32mI (86680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (87670) MAIN: Relay1: 1 | Dev1: I=0.234 V=0.0 P=0.00 E=0.210[0m
+[0;32mI (87680) MAIN: Relay2: 1 | Dev2: I=0.287 V=10.3 P=2.97 E=0.195[0m
+[0;32mI (87680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (88680) MAIN: Relay1: 1 | Dev1: I=1.171 V=53.2 P=62.34 E=0.228[0m
+[0;32mI (88680) MAIN: Relay2: 1 | Dev2: I=1.320 V=61.4 P=81.08 E=0.217[0m
+[0;32mI (88680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (89680) MAIN: Relay1: 1 | Dev1: I=0.608 V=58.6 P=35.68 E=0.238[0m
+[0;32mI (89680) MAIN: Relay2: 1 | Dev2: I=0.346 V=0.0 P=0.00 E=0.217[0m
+[0;32mI (89680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (90680) MAIN: Relay1: 1 | Dev1: I=0.245 V=54.2 P=13.26 E=0.241[0m
+[0;32mI (90680) MAIN: Relay2: 1 | Dev2: I=1.269 V=63.1 P=80.01 E=0.240[0m
+[0;32mI (90680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (91680) MAIN: Relay1: 1 | Dev1: I=0.234 V=11.8 P=2.77 E=0.242[0m
+[0;32mI (91680) MAIN: Relay2: 1 | Dev2: I=1.147 V=53.2 P=60.96 E=0.257[0m
+[0;32mI (91680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (92680) MAIN: Relay1: 1 | Dev1: I=0.556 V=11.3 P=6.29 E=0.244[0m
+[0;32mI (92680) MAIN: Relay2: 1 | Dev2: I=0.612 V=13.4 P=8.17 E=0.259[0m
+[0;32mI (92680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (93680) MAIN: Relay1: 1 | Dev1: I=1.209 V=46.3 P=55.94 E=0.259[0m
+[0;32mI (93680) MAIN: Relay2: 1 | Dev2: I=0.827 V=49.3 P=40.82 E=0.270[0m
+[0;32mI (93680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (94680) MAIN: Relay1: 1 | Dev1: I=0.527 V=10.5 P=5.56 E=0.261[0m
+[0;32mI (94680) MAIN: Relay2: 1 | Dev2: I=0.529 V=17.7 P=9.39 E=0.273[0m
+[0;32mI (94680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (95670) MAIN: Relay1: 1 | Dev1: I=0.203 V=0.0 P=0.00 E=0.261[0m
+[0;32mI (95680) MAIN: Relay2: 1 | Dev2: I=0.237 V=10.9 P=2.59 E=0.274[0m
+[0;32mI (95680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (95720) FIREBASE: User 0A:4E:17:05 saved: E1=0.238, E2=0.217, E=0.455[0m
+[0;32mI (96670) MAIN: Relay1: 1 | Dev1: I=0.200 V=0.0 P=0.00 E=0.261[0m
+[0;32mI (96680) MAIN: Relay2: 1 | Dev2: I=0.220 V=0.0 P=0.00 E=0.274[0m
+[0;32mI (96680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (97680) MAIN: Relay1: 1 | Dev1: I=1.065 V=59.9 P=63.74 E=0.279[0m
+[0;32mI (97680) MAIN: Relay2: 1 | Dev2: I=0.540 V=49.8 P=26.86 E=0.281[0m
+[0;32mI (97680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (98620) FIREBASE: dev1/Status changed -> 0[0m
+[0;32mI (98680) MAIN: Relay1: 0 | Dev1: I=0.189 V=65.0 P=12.30 E=0.282[0m
+[0;32mI (98680) MAIN: Relay2: 1 | Dev2: I=0.834 V=0.0 P=0.00 E=0.281[0m
+[0;32mI (98680) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (99610) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (99610) MAIN: Relay2: 1 | Dev2: I=0.753 V=52.7 P=39.65 E=0.292[0m
+[0;32mI (99610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (100430) FIREBASE: dev2/Status changed -> 0[0m
+[0;32mI (100540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (100540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (100540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (101540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (101540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (101540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (102540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (102540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (102540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (103540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (103540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (103540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (104540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (104540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (104540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (105540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (105540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (105540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (106540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (106540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (106540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (107540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (107540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (107540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (108540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (108540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (108540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (109540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (109540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (109540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (110540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (110540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (110540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (111540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (111540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (111540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (111720) FIREBASE: User 0A:4E:17:05 saved: E1=0.282, E2=0.292, E=0.574[0m
+[0;32mI (112540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (112540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (112540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (113540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (113540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (113540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (114540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.282[0m
+[0;32mI (114540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (114540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (114820) FIREBASE: dev1/Status changed -> 1[0m
+[0;32mI (115610) MAIN: Relay1: 1 | Dev1: I=0.000 V=57.7 P=0.00 E=0.282[0m
+[0;32mI (115610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (115610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (116610) MAIN: Relay1: 1 | Dev1: I=0.075 V=31.6 P=2.36 E=0.283[0m
+[0;32mI (116610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (116610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (117610) MAIN: Relay1: 1 | Dev1: I=0.750 V=55.7 P=41.73 E=0.294[0m
+[0;32mI (117610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (117610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (118610) MAIN: Relay1: 1 | Dev1: I=0.721 V=48.9 P=35.31 E=0.304[0m
+[0;32mI (118610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (118610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (119610) MAIN: Relay1: 1 | Dev1: I=0.000 V=0.0 P=0.00 E=0.304[0m
+[0;32mI (119610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (119610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (120610) MAIN: Relay1: 1 | Dev1: I=0.661 V=43.1 P=28.49 E=0.312[0m
+[0;32mI (120610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (120610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (121610) MAIN: Relay1: 1 | Dev1: I=0.000 V=0.0 P=0.00 E=0.312[0m
+[0;32mI (121610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (121610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (122610) MAIN: Relay1: 1 | Dev1: I=0.648 V=30.9 P=20.03 E=0.318[0m
+[0;32mI (122610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (122610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (123610) MAIN: Relay1: 1 | Dev1: I=0.625 V=42.8 P=26.75 E=0.325[0m
+[0;32mI (123610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (123610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (124610) MAIN: Relay1: 1 | Dev1: I=0.182 V=40.6 P=7.40 E=0.327[0m
+[0;32mI (124610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (124610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (125610) MAIN: Relay1: 1 | Dev1: I=0.616 V=31.8 P=19.56 E=0.332[0m
+[0;32mI (125610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (125610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (126600) MAIN: Relay1: 1 | Dev1: I=0.174 V=11.7 P=2.03 E=0.333[0m
+[0;32mI (126610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (126610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (127610) MAIN: Relay1: 1 | Dev1: I=0.116 V=10.8 P=1.26 E=0.333[0m
+[0;32mI (127610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (127610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (128610) MAIN: Relay1: 1 | Dev1: I=0.604 V=26.6 P=16.04 E=0.338[0m
+[0;32mI (128610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (128610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (129120) FIREBASE: User 0A:4E:17:05 saved: E1=0.312, E2=0.292, E=0.604[0m
+[0;32mI (129610) MAIN: Relay1: 1 | Dev1: I=0.598 V=38.6 P=23.08 E=0.344[0m
+[0;32mI (129610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (129610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (130610) MAIN: Relay1: 1 | Dev1: I=0.652 V=50.0 P=32.60 E=0.353[0m
+[0;32mI (130610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (130610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (131610) MAIN: Relay1: 1 | Dev1: I=0.223 V=19.8 P=4.42 E=0.354[0m
+[0;32mI (131610) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (131610) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (131810) FIREBASE: dev1/Status changed -> 0[0m
+[0;32mI (132540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.0 P=0.00 E=0.354[0m
+[0;32mI (132540) MAIN: Relay2: 0 | Dev2: I=0.000 V=0.0 P=0.00 E=0.292[0m
+[0;32mI (132540) MAIN: UID=0A:4E:17:05[0m
+[0;32mI (133540) MAIN: Relay1: 0 | Dev1: I=0.000 V=0.

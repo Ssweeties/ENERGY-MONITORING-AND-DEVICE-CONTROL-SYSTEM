@@ -1,0 +1,163 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\DA2\hello_world\build\hello_world.elf D:\DA2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=32b44h (207684) map[0m
+[0;32mI (157) esp_image: segment 1: paddr=00042b6c vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (163) esp_image: segment 2: paddr=00046c30 vaddr=40080000 size=093e8h ( 37864) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a57d4h (677844) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f57fc vaddr=400893e8 size=11998h ( 72088) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=0010719c vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (462) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (477) app_init: Project name:     hello_world[0m
+[0;32mI (481) app_init: App version:      1[0m
+[0;32mI (484) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (489) app_init: ELF file SHA256:  cc7d18e69...[0m
+[0;32mI (494) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (497) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (501) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (505) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (509) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB90F0 len 00026F10 (155 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 4009AD80 len 00005280 (20 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (570) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (589) MAIN: ========== SYSTEM START ==========[0m
+[0;32mI (609) MAIN: GPIO initialized[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc1214, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (629) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (639) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (659) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (669) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (679) wifi_init: tcp rx win: 5760[0m
+[0;32mI (679) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (699) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (699) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (789) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(0)[0m
+[0;32mI (829) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (839) wifi:enable tsf[0m
+[0;32mI (839) MAIN: WiFi initialized[0m
+[0;32mI (839) MAIN: Waiting for WiFi...[0m
+[0;32mI (1209) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (1209) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (2439) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (2459) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (2479) wifi:connected with Redmi Note 14, aid = 1, channel 1, BW20, bssid = 0e:d5:be:5e:6d:cc[0m
+[0;32mI (2479) wifi:security: WPA3-SAE, phy: bgn, rssi: -25[0m
+[0;32mI (2499) wifi:pm start, type: 1[0m
+
+[0;32mI (2499) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (2569) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (2569) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (3539) esp_netif_handlers: sta ip: 10.11.45.188, mask: 255.255.255.0, gw: 10.11.45.156[0m
+[0;32mI (3539) MAIN: WiFi connected, IP: 10.11.45.188[0m
+[0;32mI (5839) OLED: Initializing...[0m
+[0;32mI (5969) OLED: Ready[0m
+[0;32mI (5989) POWER: Initializing...[0m
+[0;32mI (6009) POWER: ACS712 ch6 zero=2378mV[0m
+[0;32mI (6019) POWER: ZMPT ch7 zero=2378mV[0m
+[0;32mI (6029) POWER: ACS712 ch4 zero=2374mV[0m
+[0;32mI (6049) POWER: ZMPT ch5 zero=2377mV[0m
+[0;32mI (6049) POWER: Ready[0m
+[0;32mI (6049) FIREBASE: Initializing...[0m
+[1;31mE (9299) esp-tls: [sock=54] select() timeout[0m
+[1;31mE (9299) esp-tls: Failed to open new connection[0m
+[1;31mE (9299) transport_base: Failed to open a new connection[0m
+[1;31mE (9299) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (9299) FIREBASE: Ready[0m
+[0;32mI (9299) MAIN: System ready[0m
+[0;32mI (9309) MAIN: Stream Task Started[0m
+[0;32mI (9309) MAIN: Push Task Started[0m
+[0;32mI (9309) MAIN: Main task started[0m
+[0;32mI (9319) MAIN: ========== RUNNING ==========[0m
+[0;32mI (9319) main_task: Returned from app_main()[0m
+[1;31mE (29809) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (29809) esp-tls: Failed to open new connection[0m
+[1;31mE (29809) transport_base: Failed to open a new connection[0m
+[1;31mE (29809) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (29819) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (48329) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (48329) esp-tls: Failed to open new connection[0m
+[1;31mE (48329) transport_base: Failed to open a new connection[0m
+[1;31mE (48329) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (48339) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (66849) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (66849) esp-tls: Failed to open new connection[0m
+[1;31mE (66849) transport_base: Failed to open a new connection[0m
+[1;31mE (66849) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (66859) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (85369) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (85369) esp-tls: Failed to open new connection[0m
+[1;31mE (85369) transport_base: Failed to open a new connection[0m
+[1;31mE (85369) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (85379) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (103889) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (103889) esp-tls: Failed to open new connection[0m
+[1;31mE (103889) transport_base: Failed to open a new connection[0m
+[1;31mE (103889) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (103899) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (122409) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (122409) esp-tls: Failed to open new connection[0m
+[1;31mE (122409) transport_base: Failed to open a new connection[0m
+[1;31mE (122409) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (122419) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (140929) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (140929) esp-tls: Failed to open new connection[0m
+[1;31mE (140929) transport_base: Failed to open a new connection[0m
+[1;31mE (140929) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (140939) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (159449) esp-tls: [sock=54] delayed connect error: Software caused connection abort[0m
+[1;31mE (159449) esp-tls: Failed to open new connection[0m
+[1;31mE (159449) transport_base: Failed to open a new connection[0m
+[1;31mE (159449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (159459) FIREBASE: Stream Connection Failed: ESP_ERR_HTTP_CONNECT[0m

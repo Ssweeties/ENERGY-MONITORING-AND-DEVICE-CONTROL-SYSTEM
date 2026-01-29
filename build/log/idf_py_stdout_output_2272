@@ -1,0 +1,15 @@
+Command: ninja all
+[1/6] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\DA2\hello_world\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/DA2/hello_world/build/bootloader/bootloader.bin"
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[2/6] No install step for 'bootloader'
+[3/6] Completed 'bootloader'
+[4/6] Linking CXX executable hello_world.elf
+FAILED: hello_world.elf 
+C:\WINDOWS\system32\cmd.exe /C "cd . && C:\Espressif\tools\xtensa-esp-elf\esp-14.2.0_20251107\xtensa-esp-elf\bin\xtensa-esp32-elf-g++.exe -mlongcalls -Wno-frame-address  -fno-builtin-memcpy -fno-builtin-memset -fno-builtin-bzero -fno-builtin-stpcpy -fno-builtin-strncpy -nostartfiles    -Wl,--cref -Wl,--defsym=IDF_TARGET_ESP32=0 -Wl,--Map=D:/DA2/hello_world/build/hello_world.map -Wl,--no-warn-rwx-segments -Wl,--orphan-handling=warn -fno-rtti -fno-lto -Wl,--gc-sections -Wl,--warn-common -T esp32.peripherals.ld -T esp32.rom.ld -T esp32.rom.api.ld -T esp32.rom.libgcc.ld -T esp32.rom.newlib-data.ld -T esp32.rom.syscalls.ld -T esp32.rom.libc-funcs.ld -T esp32.rom.newlib-reent-funcs.ld -T memory.ld -T sections.ld @CMakeFiles\hello_world.elf.rsp -o hello_world.elf && cd ."
+C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(power.c.obj):(.literal.power_init+0x28): undefined reference to `zmpt101b_auto_midpoint'
+C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: esp-idf/main/libmain.a(power.c.obj): in function `power_init':
+D:/DA2/hello_world/main/components/power.c:190:(.text.power_init+0x7a): undefined reference to `zmpt101b_auto_midpoint'
+C:/Espressif/tools/xtensa-esp-elf/esp-14.2.0_20251107/xtensa-esp-elf/bin/../lib/gcc/xtensa-esp-elf/14.2.0/../../../../xtensa-esp-elf/bin/ld.exe: D:/DA2/hello_world/main/components/power.c:194:(.text.power_init+0x91): undefined reference to `zmpt101b_auto_midpoint'
+collect2.exe: error: ld returned 1 exit status
+ninja: build stopped: subcommand failed.

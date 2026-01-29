@@ -1,0 +1,2 @@
+source D:/DA2/hello_world/build/bootloader/gdbinit/symbols
+source D:/DA2/hello_world/build/bootloader/gdbinit/connect

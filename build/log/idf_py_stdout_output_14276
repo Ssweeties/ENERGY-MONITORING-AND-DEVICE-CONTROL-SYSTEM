@@ -1,0 +1,1578 @@
+Command: C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:\Espressif\frameworks\esp-idf-v5.5.2\tools/idf_monitor.py -p COM3 -b 115200 --toolchain-prefix xtensa-esp32-elf- --target esp32 --revision 0 D:\DA2\hello_world\build\hello_world.elf D:\DA2\hello_world\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe' 'C:\Espressif\frameworks\esp-idf-v5.5.2\tools\idf.py'
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=330a4h (209060) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000430cc vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00047190 vaddr=40080000 size=08e88h ( 36488) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5580h (677248) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f55a8 vaddr=40088e88 size=11f30h ( 73520) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=001074e0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (477) app_init: Project name:     hello_world[0m
+[0;32mI (481) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  c27b4afca...[0m
+[0;32mI (494) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB90E0 len 00026F20 (155 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 4009ADB8 len 00005248 (20 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (589) MAIN: ========== BOOT START ==========[0m
+[0;32mI (609) MAIN: NVS initialized[0m
+[0;32mI (609) MAIN: Firebase mutex created[0m
+[0;32mI (609) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc1180, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (639) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (669) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (679) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (699) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (709) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (789) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (789) wifi:enable tsf[0m
+[0;32mI (799) MAIN: WiFi initialization done[0m
+[0;32mI (799) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (3219) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (3609) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (3609) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4889) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (4899) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (4939) wifi:connected with Redmi Note 14, aid = 1, channel 1, BW20, bssid = 1a:9a:2f:27:59:1f[0m
+[0;32mI (4939) wifi:security: WPA3-SAE, phy: bgn, rssi: -34[0m
+[0;32mI (4959) wifi:pm start, type: 1[0m
+
+[0;32mI (4959) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5099) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (5099) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (5799) OLED: Initializing OLED...[0m
+[0;32mI (5799) OLED: I2C initialized successfully[0m
+[0;32mI (5899) OLED: OLED initialized successfully[0m
+[0;32mI (5899) POWER: Initializing power measurement module...[0m
+[0;32mI (5899) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5949) POWER: ACS712 channel 6 zero point: 2352.57 mV[0m
+[0;32mI (5949) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (6009) POWER: ACS712 channel 4 zero point: 2248.98 mV[0m
+[0;32mI (6009) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (6009) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6009) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6019) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6019) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[1;31mE (6029) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6039) esp-tls: Failed to open new connection[0m
+[1;31mE (6039) transport_base: Failed to open a new connection[0m
+[1;31mE (6049) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6059) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6069) esp-tls: Failed to open new connection[0m
+[1;31mE (6069) transport_base: Failed to open a new connection[0m
+[1;31mE (6079) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6079) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6089) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6099) esp-tls: Failed to open new connection[0m
+[1;31mE (6099) transport_base: Failed to open a new connection[0m
+[1;31mE (6109) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6109) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6119) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6129) esp-tls: Failed to open new connection[0m
+[1;31mE (6129) transport_base: Failed to open a new connection[0m
+[1;31mE (6139) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6139) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6149) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6159) esp-tls: Failed to open new connection[0m
+[1;31mE (6159) transport_base: Failed to open a new connection[0m
+[1;31mE (6169) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6169) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6179) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6189) esp-tls: Failed to open new connection[0m
+[1;31mE (6189) transport_base: Failed to open a new connection[0m
+[1;31mE (6199) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6199) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6209) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6219) esp-tls: Failed to open new connection[0m
+[1;31mE (6219) transport_base: Failed to open a new connection[0m
+[1;31mE (6229) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6229) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6239) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6249) esp-tls: Failed to open new connection[0m
+[1;31mE (6249) transport_base: Failed to open a new connection[0m
+[1;31mE (6259) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6259) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6269) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6279) esp-tls: Failed to open new connection[0m
+[1;31mE (6279) transport_base: Failed to open a new connection[0m
+[1;31mE (6289) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6289) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6299) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6309) esp-tls: Failed to open new connection[0m
+[1;31mE (6309) transport_base: Failed to open a new connection[0m
+[1;31mE (6319) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6319) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6329) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6339) esp-tls: Failed to open new connection[0m
+[1;31mE (6339) transport_base: Failed to open a new connection[0m
+[1;31mE (6349) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6349) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6359) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6369) esp-tls: Failed to open new connection[0m
+[1;31mE (6379) transport_base: Failed to open a new connection[0m
+[1;31mE (6379) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6379) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6389) FIREBASE: Firebase initialized successfully[0m
+[0;32mI (6399) MAIN: System initialization completed[0m
+[0;32mI (6399) MAIN: Main task started[0m
+[0;32mI (6399) MAIN: Stack free: 156176 bytes[0m
+[1;31mE (6409) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6419) esp-tls: Failed to open new connection[0m
+[1;31mE (6419) transport_base: Failed to open a new connection[0m
+[1;31mE (6429) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6429) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6439) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6449) esp-tls: Failed to open new connection[0m
+[1;31mE (6449) transport_base: Failed to open a new connection[0m
+[1;31mE (6459) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (6459) MAIN: ========== BOOT DONE ==========[0m
+[1;31mE (6459) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6469) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6479) esp-tls: Failed to open new connection[0m
+[1;31mE (6489) transport_base: Failed to open a new connection[0m
+[1;31mE (6489) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6499) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6499) main_task: Returned from app_main()[0m
+[1;31mE (6499) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6519) esp-tls: Failed to open new connection[0m
+[1;31mE (6519) transport_base: Failed to open a new connection[0m
+[1;31mE (6529) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6529) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6539) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6549) esp-tls: Failed to open new connection[0m
+[1;31mE (6549) transport_base: Failed to open a new connection[0m
+[1;31mE (6559) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6559) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6569) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6579) esp-tls: Failed to open new connection[0m
+[1;31mE (6579) transport_base: Failed to open a new connection[0m
+[1;31mE (6589) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6589) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6599) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6609) esp-tls: Failed to open new connection[0m
+[1;31mE (6609) transport_base: Failed to open a new connection[0m
+[1;31mE (6619) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6619) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6629) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6639) esp-tls: Failed to open new connection[0m
+[1;31mE (6639) transport_base: Failed to open a new connection[0m
+[1;31mE (6649) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6649) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6659) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6669) esp-tls: Failed to open new connection[0m
+[1;31mE (6669) transport_base: Failed to open a new connection[0m
+[1;31mE (6679) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6679) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6689) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6699) esp-tls: Failed to open new connection[0m
+[1;31mE (6699) transport_base: Failed to open a new connection[0m
+[1;31mE (6709) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6709) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6719) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6729) esp-tls: Failed to open new connection[0m
+[1;31mE (6729) transport_base: Failed to open a new connection[0m
+[1;31mE (6739) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6739) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6749) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6759) esp-tls: Failed to open new connection[0m
+[1;31mE (6759) transport_base: Failed to open a new connection[0m
+[1;31mE (6769) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6769) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6789) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (6789) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6789) esp-tls: Failed to open new connection[0m
+[1;31mE (6799) transport_base: Failed to open a new connection[0m
+[1;31mE (6799) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6809) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6809) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6819) esp-tls: Failed to open new connection[0m
+[1;31mE (6829) transport_base: Failed to open a new connection[0m
+[1;31mE (6829) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6839) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6839) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6849) esp-tls: Failed to open new connection[0m
+[1;31mE (6859) transport_base: Failed to open a new connection[0m
+[1;31mE (6859) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6869) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6869) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6879) esp-tls: Failed to open new connection[0m
+[1;31mE (6889) transport_base: Failed to open a new connection[0m
+[1;31mE (6889) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6899) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6909) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6909) esp-tls: Failed to open new connection[0m
+[1;31mE (6919) transport_base: Failed to open a new connection[0m
+[1;31mE (6919) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6929) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6929) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6939) esp-tls: Failed to open new connection[0m
+[1;31mE (6949) transport_base: Failed to open a new connection[0m
+[1;31mE (6949) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6959) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6959) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6969) esp-tls: Failed to open new connection[0m
+[1;31mE (6979) transport_base: Failed to open a new connection[0m
+[1;31mE (6979) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6989) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6999) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6999) esp-tls: Failed to open new connection[0m
+[1;31mE (7009) transport_base: Failed to open a new connection[0m
+[1;31mE (7009) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7019) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7019) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7029) esp-tls: Failed to open new connection[0m
+[1;31mE (7039) transport_base: Failed to open a new connection[0m
+[1;31mE (7039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7059) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7059) esp-tls: Failed to open new connection[0m
+[1;31mE (7069) transport_base: Failed to open a new connection[0m
+[1;31mE (7069) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7079) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7089) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7089) esp-tls: Failed to open new connection[0m
+[1;31mE (7099) transport_base: Failed to open a new connection[0m
+[1;31mE (7099) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7109) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7119) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7129) esp-tls: Failed to open new connection[0m
+[1;31mE (7129) transport_base: Failed to open a new connection[0m
+[1;31mE (7129) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7139) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7149) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (7149) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7159) esp-tls: Failed to open new connection[0m
+[1;31mE (7159) transport_base: Failed to open a new connection[0m
+[1;31mE (7169) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7169) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7179) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7189) esp-tls: Failed to open new connection[0m
+[1;31mE (7189) transport_base: Failed to open a new connection[0m
+[1;31mE (7199) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7199) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7209) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7219) esp-tls: Failed to open new connection[0m
+[1;31mE (7219) transport_base: Failed to open a new connection[0m
+[1;31mE (7229) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7229) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7239) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7249) esp-tls: Failed to open new connection[0m
+[1;31mE (7249) transport_base: Failed to open a new connection[0m
+[1;31mE (7259) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7259) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7269) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7279) esp-tls: Failed to open new connection[0m
+[1;31mE (7279) transport_base: Failed to open a new connection[0m
+[1;31mE (7289) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7289) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7299) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7309) esp-tls: Failed to open new connection[0m
+[1;31mE (7309) transport_base: Failed to open a new connection[0m
+[1;31mE (7319) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7319) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7329) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7339) esp-tls: Failed to open new connection[0m
+[1;31mE (7339) transport_base: Failed to open a new connection[0m
+[1;31mE (7349) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7349) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7359) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7369) esp-tls: Failed to open new connection[0m
+[1;31mE (7379) transport_base: Failed to open a new connection[0m
+[1;31mE (7379) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7379) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7389) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7399) esp-tls: Failed to open new connection[0m
+[1;31mE (7409) transport_base: Failed to open a new connection[0m
+[1;31mE (7409) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7419) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7419) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7429) esp-tls: Failed to open new connection[0m
+[1;31mE (7439) transport_base: Failed to open a new connection[0m
+[1;31mE (7439) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7449) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7449) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7459) esp-tls: Failed to open new connection[0m
+[1;31mE (7469) transport_base: Failed to open a new connection[0m
+[1;31mE (7469) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7479) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7479) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7489) esp-tls: Failed to open new connection[0m
+[1;31mE (7499) transport_base: Failed to open a new connection[0m
+[1;31mE (7499) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7509) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7519) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (7519) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7529) esp-tls: Failed to open new connection[0m
+[1;31mE (7529) transport_base: Failed to open a new connection[0m
+[1;31mE (7539) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7539) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7549) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7559) esp-tls: Failed to open new connection[0m
+[1;31mE (7559) transport_base: Failed to open a new connection[0m
+[1;31mE (7569) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7569) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7579) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7589) esp-tls: Failed to open new connection[0m
+[1;31mE (7589) transport_base: Failed to open a new connection[0m
+[1;31mE (7599) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7599) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7609) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7619) esp-tls: Failed to open new connection[0m
+[1;31mE (7619) transport_base: Failed to open a new connection[0m
+[1;31mE (7629) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7629) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7639) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7649) esp-tls: Failed to open new connection[0m
+[1;31mE (7649) transport_base: Failed to open a new connection[0m
+[1;31mE (7659) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7659) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7669) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7679) esp-tls: Failed to open new connection[0m
+[1;31mE (7679) transport_base: Failed to open a new connection[0m
+[1;31mE (7689) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7689) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7699) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7709) esp-tls: Failed to open new connection[0m
+[1;31mE (7709) transport_base: Failed to open a new connection[0m
+[1;31mE (7719) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7719) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7729) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7739) esp-tls: Failed to open new connection[0m
+[1;31mE (7739) transport_base: Failed to open a new connection[0m
+[1;31mE (7749) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7749) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7759) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7769) esp-tls: Failed to open new connection[0m
+[1;31mE (7769) transport_base: Failed to open a new connection[0m
+[1;31mE (7779) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7779) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7789) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7799) esp-tls: Failed to open new connection[0m
+[1;31mE (7799) transport_base: Failed to open a new connection[0m
+[1;31mE (7809) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7809) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7819) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7829) esp-tls: Failed to open new connection[0m
+[1;31mE (7829) transport_base: Failed to open a new connection[0m
+[1;31mE (7839) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7839) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7849) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7859) esp-tls: Failed to open new connection[0m
+[1;31mE (7859) transport_base: Failed to open a new connection[0m
+[1;31mE (7869) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7869) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7889) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (7889) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7889) esp-tls: Failed to open new connection[0m
+[1;31mE (7899) transport_base: Failed to open a new connection[0m
+[1;31mE (7899) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7909) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7909) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7919) esp-tls: Failed to open new connection[0m
+[1;31mE (7929) transport_base: Failed to open a new connection[0m
+[1;31mE (7929) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7939) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7939) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7949) esp-tls: Failed to open new connection[0m
+[1;31mE (7959) transport_base: Failed to open a new connection[0m
+[1;31mE (7959) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7969) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7969) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7979) esp-tls: Failed to open new connection[0m
+[1;31mE (7989) transport_base: Failed to open a new connection[0m
+[1;31mE (7989) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7999) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8009) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8019) esp-tls: Failed to open new connection[0m
+[1;31mE (8019) transport_base: Failed to open a new connection[0m
+[1;31mE (8019) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8029) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8039) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8039) esp-tls: Failed to open new connection[0m
+[1;31mE (8049) transport_base: Failed to open a new connection[0m
+[1;31mE (8049) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8059) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8069) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8069) esp-tls: Failed to open new connection[0m
+[1;31mE (8079) transport_base: Failed to open a new connection[0m
+[1;31mE (8079) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8089) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8099) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8109) esp-tls: Failed to open new connection[0m
+[1;31mE (8109) transport_base: Failed to open a new connection[0m
+[1;31mE (8109) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8119) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8129) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8139) esp-tls: Failed to open new connection[0m
+[1;31mE (8139) transport_base: Failed to open a new connection[0m
+[1;31mE (8139) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8149) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8159) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8169) esp-tls: Failed to open new connection[0m
+[1;31mE (8169) transport_base: Failed to open a new connection[0m
+[1;31mE (8179) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8179) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8189) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8199) esp-tls: Failed to open new connection[0m
+[1;31mE (8199) transport_base: Failed to open a new connection[0m
+[1;31mE (8209) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8209) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8219) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8229) esp-tls: Failed to open new connection[0m
+[1;31mE (8229) transport_base: Failed to open a new connection[0m
+[1;31mE (8239) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8239) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8259) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (8259) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8259) esp-tls: Failed to open new connection[0m
+[1;31mE (8269) transport_base: Failed to open a new connection[0m
+[1;31mE (8269) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8279) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8279) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8289) esp-tls: Failed to open new connection[0m
+[1;31mE (8299) transport_base: Failed to open a new connection[0m
+[1;31mE (8299) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8309) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8309) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8319) esp-tls: Failed to open new connection[0m
+[1;31mE (8329) transport_base: Failed to open a new connection[0m
+[1;31mE (8329) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8339) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8339) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8349) esp-tls: Failed to open new connection[0m
+[1;31mE (8359) transport_base: Failed to open a new connection[0m
+[1;31mE (8359) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8369) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8379) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8379) esp-tls: Failed to open new connection[0m
+[1;31mE (8389) transport_base: Failed to open a new connection[0m
+[1;31mE (8389) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8399) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8399) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8409) esp-tls: Failed to open new connection[0m
+[1;31mE (8419) transport_base: Failed to open a new connection[0m
+[1;31mE (8419) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8429) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8439) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8439) esp-tls: Failed to open new connection[0m
+[1;31mE (8449) transport_base: Failed to open a new connection[0m
+[1;31mE (8449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8459) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8469) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8469) esp-tls: Failed to open new connection[0m
+[1;31mE (8479) transport_base: Failed to open a new connection[0m
+[1;31mE (8479) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8489) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8499) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8499) esp-tls: Failed to open new connection[0m
+[1;31mE (8509) transport_base: Failed to open a new connection[0m
+[1;31mE (8509) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8519) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8529) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8539) esp-tls: Failed to open new connection[0m
+[1;31mE (8539) transport_base: Failed to open a new connection[0m
+[1;31mE (8539) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8549) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8559) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8569) esp-tls: Failed to open new connection[0m
+[1;31mE (8569) transport_base: Failed to open a new connection[0m
+[1;31mE (8569) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8579) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8589) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8599) esp-tls: Failed to open new connection[0m
+[1;31mE (8599) transport_base: Failed to open a new connection[0m
+[1;31mE (8609) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8609) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8629) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (8629) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8629) esp-tls: Failed to open new connection[0m
+[1;31mE (8639) transport_base: Failed to open a new connection[0m
+[1;31mE (8639) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8649) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8649) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8659) esp-tls: Failed to open new connection[0m
+[1;31mE (8669) transport_base: Failed to open a new connection[0m
+[1;31mE (8669) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8679) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8679) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8689) esp-tls: Failed to open new connection[0m
+[1;31mE (8699) transport_base: Failed to open a new connection[0m
+[1;31mE (8699) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8709) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8709) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8719) esp-tls: Failed to open new connection[0m
+[1;31mE (8729) transport_base: Failed to open a new connection[0m
+[1;31mE (8729) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8739) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8749) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8749) esp-tls: Failed to open new connection[0m
+[1;31mE (8759) transport_base: Failed to open a new connection[0m
+[1;31mE (8759) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8769) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8769) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8779) esp-tls: Failed to open new connection[0m
+[1;31mE (8789) transport_base: Failed to open a new connection[0m
+[1;31mE (8789) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8799) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8799) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8809) esp-tls: Failed to open new connection[0m
+[1;31mE (8819) transport_base: Failed to open a new connection[0m
+[1;31mE (8819) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8829) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8839) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8839) esp-tls: Failed to open new connection[0m
+[1;31mE (8849) transport_base: Failed to open a new connection[0m
+[1;31mE (8849) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8859) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8859) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8869) esp-tls: Failed to open new connection[0m
+[1;31mE (8879) transport_base: Failed to open a new connection[0m
+[1;31mE (8879) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8889) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8899) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8899) esp-tls: Failed to open new connection[0m
+[1;31mE (8909) transport_base: Failed to open a new connection[0m
+[1;31mE (8909) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8919) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8929) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8929) esp-tls: Failed to open new connection[0m
+[1;31mE (8939) transport_base: Failed to open a new connection[0m
+[1;31mE (8939) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8949) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8959) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8969) esp-tls: Failed to open new connection[0m
+[1;31mE (8969) transport_base: Failed to open a new connection[0m
+[1;31mE (8969) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8979) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8989) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (8989) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8999) esp-tls: Failed to open new connection[0m
+[1;31mE (8999) transport_base: Failed to open a new connection[0m
+[1;31mE (9009) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9009) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9019) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9029) esp-tls: Failed to open new connection[0m
+[1;31mE (9029) transport_base: Failed to open a new connection[0m
+[1;31mE (9039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9039) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9049) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9059) esp-tls: Failed to open new connection[0m
+[1;31mE (9059) transport_base: Failed to open a new connection[0m
+[1;31mE (9069) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9069) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9079) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9089) esp-tls: Failed to open new connection[0m
+[1;31mE (9089) transport_base: Failed to open a new connection[0m
+[1;31mE (9099) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9099) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9109) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9119) esp-tls: Failed to open new connection[0m
+[1;31mE (9119) transport_base: Failed to open a new connection[0m
+[1;31mE (9129) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9129) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9139) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9149) esp-tls: Failed to open new connection[0m
+[1;31mE (9149) transport_base: Failed to open a new connection[0m
+[1;31mE (9159) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9159) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9169) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9179) esp-tls: Failed to open new connection[0m
+[1;31mE (9179) transport_base: Failed to open a new connection[0m
+[1;31mE (9189) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9189) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9199) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9209) esp-tls: Failed to open new connection[0m
+[1;31mE (9219) transport_base: Failed to open a new connection[0m
+[1;31mE (9219) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9219) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9229) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9239) esp-tls: Failed to open new connection[0m
+[1;31mE (9249) transport_base: Failed to open a new connection[0m
+[1;31mE (9249) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9259) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9259) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9269) esp-tls: Failed to open new connection[0m
+[1;31mE (9279) transport_base: Failed to open a new connection[0m
+[1;31mE (9279) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9289) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9289) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9299) esp-tls: Failed to open new connection[0m
+[1;31mE (9309) transport_base: Failed to open a new connection[0m
+[1;31mE (9309) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9319) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9319) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9329) esp-tls: Failed to open new connection[0m
+[1;31mE (9339) transport_base: Failed to open a new connection[0m
+[1;31mE (9339) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9349) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9359) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (9359) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9369) esp-tls: Failed to open new connection[0m
+[1;31mE (9369) transport_base: Failed to open a new connection[0m
+[1;31mE (9379) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9379) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9389) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9399) esp-tls: Failed to open new connection[0m
+[1;31mE (9399) transport_base: Failed to open a new connection[0m
+[1;31mE (9409) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9409) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9419) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9429) esp-tls: Failed to open new connection[0m
+[1;31mE (9429) transport_base: Failed to open a new connection[0m
+[1;31mE (9439) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9439) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9449) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9459) esp-tls: Failed to open new connection[0m
+[1;31mE (9459) transport_base: Failed to open a new connection[0m
+[1;31mE (9469) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9469) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9479) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9489) esp-tls: Failed to open new connection[0m
+[1;31mE (9489) transport_base: Failed to open a new connection[0m
+[1;31mE (9499) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9499) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9509) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9519) esp-tls: Failed to open new connection[0m
+[1;31mE (9519) transport_base: Failed to open a new connection[0m
+[1;31mE (9529) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9529) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9539) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9549) esp-tls: Failed to open new connection[0m
+[1;31mE (9549) transport_base: Failed to open a new connection[0m
+[1;31mE (9559) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9559) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9569) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9579) esp-tls: Failed to open new connection[0m
+[1;31mE (9579) transport_base: Failed to open a new connection[0m
+[1;31mE (9589) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9589) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9599) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9609) esp-tls: Failed to open new connection[0m
+[1;31mE (9609) transport_base: Failed to open a new connection[0m
+[1;31mE (9619) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9619) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9629) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9639) esp-tls: Failed to open new connection[0m
+[1;31mE (9639) transport_base: Failed to open a new connection[0m
+[1;31mE (9649) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9649) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9659) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9669) esp-tls: Failed to open new connection[0m
+[1;31mE (9669) transport_base: Failed to open a new connection[0m
+[1;31mE (9679) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9679) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9689) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9699) esp-tls: Failed to open new connection[0m
+[1;31mE (9699) transport_base: Failed to open a new connection[0m
+[1;31mE (9709) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9709) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (9729) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (9729) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9729) esp-tls: Failed to open new connection[0m
+[1;31mE (9739) transport_base: Failed to open a new connection[0m
+[1;31mE (9739) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9749) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9749) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9759) esp-tls: Failed to open new connection[0m
+[1;31mE (9769) transport_base: Failed to open a new connection[0m
+[1;31mE (9769) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9779) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9779) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9789) esp-tls: Failed to open new connection[0m
+[1;31mE (9799) transport_base: Failed to open a new connection[0m
+[1;31mE (9799) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9809) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9809) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9819) esp-tls: Failed to open new connection[0m
+[1;31mE (9829) transport_base: Failed to open a new connection[0m
+[1;31mE (9829) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9839) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9849) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9849) esp-tls: Failed to open new connection[0m
+[1;31mE (9859) transport_base: Failed to open a new connection[0m
+[1;31mE (9859) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9869) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9879) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9879) esp-tls: Failed to open new connection[0m
+[1;31mE (9889) transport_base: Failed to open a new connection[0m
+[1;31mE (9889) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9899) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9909) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9909) esp-tls: Failed to open new connection[0m
+[1;31mE (9919) transport_base: Failed to open a new connection[0m
+[1;31mE (9919) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9929) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9939) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9949) esp-tls: Failed to open new connection[0m
+[1;31mE (9949) transport_base: Failed to open a new connection[0m
+[1;31mE (9949) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9959) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9969) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (9979) esp-tls: Failed to open new connection[0m
+[1;31mE (9979) transport_base: Failed to open a new connection[0m
+[1;31mE (9979) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (9989) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (9999) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10009) esp-tls: Failed to open new connection[0m
+[1;31mE (10009) transport_base: Failed to open a new connection[0m
+[1;31mE (10019) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10019) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10029) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10039) esp-tls: Failed to open new connection[0m
+[1;31mE (10039) transport_base: Failed to open a new connection[0m
+[1;31mE (10049) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10059) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10069) esp-tls: Failed to open new connection[0m
+[1;31mE (10069) transport_base: Failed to open a new connection[0m
+[1;31mE (10079) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10079) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10099) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (10099) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10099) esp-tls: Failed to open new connection[0m
+[1;31mE (10109) transport_base: Failed to open a new connection[0m
+[1;31mE (10109) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10119) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10119) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10129) esp-tls: Failed to open new connection[0m
+[1;31mE (10139) transport_base: Failed to open a new connection[0m
+[1;31mE (10139) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10149) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10159) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10169) esp-tls: Failed to open new connection[0m
+[1;31mE (10169) transport_base: Failed to open a new connection[0m
+[1;31mE (10169) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10179) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10189) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10199) esp-tls: Failed to open new connection[0m
+[1;31mE (10199) transport_base: Failed to open a new connection[0m
+[1;31mE (10209) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10209) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10219) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10229) esp-tls: Failed to open new connection[0m
+[1;31mE (10229) transport_base: Failed to open a new connection[0m
+[1;31mE (10239) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10239) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10249) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10259) esp-tls: Failed to open new connection[0m
+[1;31mE (10259) transport_base: Failed to open a new connection[0m
+[1;31mE (10269) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10269) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10279) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10289) esp-tls: Failed to open new connection[0m
+[1;31mE (10289) transport_base: Failed to open a new connection[0m
+[1;31mE (10299) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10299) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10309) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10319) esp-tls: Failed to open new connection[0m
+[1;31mE (10319) transport_base: Failed to open a new connection[0m
+[1;31mE (10329) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10329) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10339) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10349) esp-tls: Failed to open new connection[0m
+[1;31mE (10349) transport_base: Failed to open a new connection[0m
+[1;31mE (10359) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10359) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10369) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10379) esp-tls: Failed to open new connection[0m
+[1;31mE (10379) transport_base: Failed to open a new connection[0m
+[1;31mE (10389) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10389) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10399) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10409) esp-tls: Failed to open new connection[0m
+[1;31mE (10419) transport_base: Failed to open a new connection[0m
+[1;31mE (10419) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10429) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10429) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10439) esp-tls: Failed to open new connection[0m
+[1;31mE (10449) transport_base: Failed to open a new connection[0m
+[1;31mE (10449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10459) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10469) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (10469) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10479) esp-tls: Failed to open new connection[0m
+[1;31mE (10479) transport_base: Failed to open a new connection[0m
+[1;31mE (10489) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10489) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10499) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10509) esp-tls: Failed to open new connection[0m
+[1;31mE (10509) transport_base: Failed to open a new connection[0m
+[1;31mE (10519) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10519) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10529) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10539) esp-tls: Failed to open new connection[0m
+[1;31mE (10539) transport_base: Failed to open a new connection[0m
+[1;31mE (10549) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10549) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10559) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10569) esp-tls: Failed to open new connection[0m
+[1;31mE (10569) transport_base: Failed to open a new connection[0m
+[1;31mE (10579) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10579) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10589) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10599) esp-tls: Failed to open new connection[0m
+[1;31mE (10599) transport_base: Failed to open a new connection[0m
+[1;31mE (10609) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10609) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10619) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10629) esp-tls: Failed to open new connection[0m
+[1;31mE (10629) transport_base: Failed to open a new connection[0m
+[1;31mE (10639) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10639) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10649) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10659) esp-tls: Failed to open new connection[0m
+[1;31mE (10659) transport_base: Failed to open a new connection[0m
+[1;31mE (10669) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10669) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10679) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10689) esp-tls: Failed to open new connection[0m
+[1;31mE (10699) transport_base: Failed to open a new connection[0m
+[1;31mE (10699) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10709) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10709) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10719) esp-tls: Failed to open new connection[0m
+[1;31mE (10729) transport_base: Failed to open a new connection[0m
+[1;31mE (10729) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10739) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10739) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10749) esp-tls: Failed to open new connection[0m
+[1;31mE (10759) transport_base: Failed to open a new connection[0m
+[1;31mE (10759) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10769) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10769) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10779) esp-tls: Failed to open new connection[0m
+[1;31mE (10789) transport_base: Failed to open a new connection[0m
+[1;31mE (10789) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10799) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10799) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10809) esp-tls: Failed to open new connection[0m
+[1;31mE (10819) transport_base: Failed to open a new connection[0m
+[1;31mE (10819) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10829) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (10839) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (10839) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10849) esp-tls: Failed to open new connection[0m
+[1;31mE (10849) transport_base: Failed to open a new connection[0m
+[1;31mE (10859) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10859) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10869) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10879) esp-tls: Failed to open new connection[0m
+[1;31mE (10879) transport_base: Failed to open a new connection[0m
+[1;31mE (10889) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10889) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10899) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10909) esp-tls: Failed to open new connection[0m
+[1;31mE (10909) transport_base: Failed to open a new connection[0m
+[1;31mE (10919) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10919) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10929) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10939) esp-tls: Failed to open new connection[0m
+[1;31mE (10949) transport_base: Failed to open a new connection[0m
+[1;31mE (10949) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10949) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10969) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10969) esp-tls: Failed to open new connection[0m
+[1;31mE (10979) transport_base: Failed to open a new connection[0m
+[1;31mE (10979) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (10989) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (10989) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (10999) esp-tls: Failed to open new connection[0m
+[1;31mE (11009) transport_base: Failed to open a new connection[0m
+[1;31mE (11009) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11019) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11019) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11029) esp-tls: Failed to open new connection[0m
+[1;31mE (11039) transport_base: Failed to open a new connection[0m
+[1;31mE (11039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11049) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11059) esp-tls: Failed to open new connection[0m
+[1;31mE (11069) transport_base: Failed to open a new connection[0m
+[1;31mE (11069) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11079) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11079) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11089) esp-tls: Failed to open new connection[0m
+[1;31mE (11099) transport_base: Failed to open a new connection[0m
+[1;31mE (11099) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11109) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11119) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11129) esp-tls: Failed to open new connection[0m
+[1;31mE (11129) transport_base: Failed to open a new connection[0m
+[1;31mE (11129) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11139) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11149) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11159) esp-tls: Failed to open new connection[0m
+[1;31mE (11159) transport_base: Failed to open a new connection[0m
+[1;31mE (11169) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11169) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11179) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11189) esp-tls: Failed to open new connection[0m
+[1;31mE (11189) transport_base: Failed to open a new connection[0m
+[1;31mE (11199) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11199) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11219) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (11219) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11219) esp-tls: Failed to open new connection[0m
+[1;31mE (11229) transport_base: Failed to open a new connection[0m
+[1;31mE (11229) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11239) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11239) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11249) esp-tls: Failed to open new connection[0m
+[1;31mE (11259) transport_base: Failed to open a new connection[0m
+[1;31mE (11259) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11269) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11269) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11279) esp-tls: Failed to open new connection[0m
+[1;31mE (11289) transport_base: Failed to open a new connection[0m
+[1;31mE (11289) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11299) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11309) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11319) esp-tls: Failed to open new connection[0m
+[1;31mE (11319) transport_base: Failed to open a new connection[0m
+[1;31mE (11329) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11329) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11339) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11349) esp-tls: Failed to open new connection[0m
+[1;31mE (11349) transport_base: Failed to open a new connection[0m
+[1;31mE (11359) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11359) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11369) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11379) esp-tls: Failed to open new connection[0m
+[1;31mE (11379) transport_base: Failed to open a new connection[0m
+[1;31mE (11389) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11389) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11399) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11409) esp-tls: Failed to open new connection[0m
+[1;31mE (11409) transport_base: Failed to open a new connection[0m
+[1;31mE (11419) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11419) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11429) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11439) esp-tls: Failed to open new connection[0m
+[1;31mE (11439) transport_base: Failed to open a new connection[0m
+[1;31mE (11449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11449) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11459) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11469) esp-tls: Failed to open new connection[0m
+[1;31mE (11469) transport_base: Failed to open a new connection[0m
+[1;31mE (11479) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11479) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11489) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11499) esp-tls: Failed to open new connection[0m
+[1;31mE (11499) transport_base: Failed to open a new connection[0m
+[1;31mE (11509) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11509) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11519) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11529) esp-tls: Failed to open new connection[0m
+[1;31mE (11529) transport_base: Failed to open a new connection[0m
+[1;31mE (11539) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11539) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11549) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11559) esp-tls: Failed to open new connection[0m
+[1;31mE (11569) transport_base: Failed to open a new connection[0m
+[1;31mE (11569) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11579) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11589) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (11589) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11599) esp-tls: Failed to open new connection[0m
+[1;31mE (11599) transport_base: Failed to open a new connection[0m
+[1;31mE (11609) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11609) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11619) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11629) esp-tls: Failed to open new connection[0m
+[1;31mE (11629) transport_base: Failed to open a new connection[0m
+[1;31mE (11639) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11639) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11649) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11659) esp-tls: Failed to open new connection[0m
+[1;31mE (11659) transport_base: Failed to open a new connection[0m
+[1;31mE (11669) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11669) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11679) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11689) esp-tls: Failed to open new connection[0m
+[1;31mE (11689) transport_base: Failed to open a new connection[0m
+[1;31mE (11699) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11699) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11709) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11719) esp-tls: Failed to open new connection[0m
+[1;31mE (11719) transport_base: Failed to open a new connection[0m
+[1;31mE (11729) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11729) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11739) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11749) esp-tls: Failed to open new connection[0m
+[1;31mE (11749) transport_base: Failed to open a new connection[0m
+[1;31mE (11759) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11759) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11769) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11779) esp-tls: Failed to open new connection[0m
+[1;31mE (11779) transport_base: Failed to open a new connection[0m
+[1;31mE (11789) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11789) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11799) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11809) esp-tls: Failed to open new connection[0m
+[1;31mE (11819) transport_base: Failed to open a new connection[0m
+[1;31mE (11819) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11819) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11829) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11839) esp-tls: Failed to open new connection[0m
+[1;31mE (11849) transport_base: Failed to open a new connection[0m
+[1;31mE (11849) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11859) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11859) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11869) esp-tls: Failed to open new connection[0m
+[1;31mE (11879) transport_base: Failed to open a new connection[0m
+[1;31mE (11879) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11889) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11889) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11899) esp-tls: Failed to open new connection[0m
+[1;31mE (11909) transport_base: Failed to open a new connection[0m
+[1;31mE (11909) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11919) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11929) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11929) esp-tls: Failed to open new connection[0m
+[1;31mE (11939) transport_base: Failed to open a new connection[0m
+[1;31mE (11939) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11949) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (11959) MAIN: Stack free: 148688 bytes[0m
+[1;31mE (11959) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11969) esp-tls: Failed to open new connection[0m
+[1;31mE (11969) transport_base: Failed to open a new connection[0m
+[1;31mE (11979) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (11979) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (11989) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (11999) esp-tls: Failed to open new connection[0m
+[1;31mE (11999) transport_base: Failed to open a new connection[0m
+[1;31mE (12009) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12009) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12019) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12029) esp-tls: Failed to open new connection[0m
+[1;31mE (12029) transport_base: Failed to open a new connection[0m
+[1;31mE (12039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12039) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12049) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12059) esp-tls: Failed to open new connection[0m
+[1;31mE (12059) transport_base: Failed to open a new connection[0m
+[1;31mE (12069) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12069) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12079) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (12089) esp-tls: Failed to open new connection[0m
+[1;31mE (12099) transport_base: Failed to open a new connection[0m
+[1;31mE (12099) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (12109) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (12109) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.co�ets Jul 29 2019 12:21:46[0m
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6384
+load:0x40078000,len:15916
+load:0x40080400,len:3920
+entry 0x40080644
+[0;32mI (27) boot: ESP-IDF v5.5.2 2nd stage bootloader[0m
+[0;32mI (27) boot: compile time Jan 25 2026 16:52:14[0m
+[0;32mI (28) boot: Multicore bootloader[0m
+[0;32mI (29) boot: chip revision: v3.1[0m
+[0;32mI (32) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (35) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (39) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (42) boot: Enabling RNG early entropy source...[0m
+[0;32mI (47) boot: Partition Table:[0m
+[0;32mI (49) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (56) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (62) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (69) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (75) boot: End of partition table[0m
+[0;32mI (79) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=330a4h (209060) map[0m
+[0;32mI (158) esp_image: segment 1: paddr=000430cc vaddr=3ffb0000 size=040bch ( 16572) load[0m
+[0;32mI (164) esp_image: segment 2: paddr=00047190 vaddr=40080000 size=08e88h ( 36488) load[0m
+[0;32mI (178) esp_image: segment 3: paddr=00050020 vaddr=400d0020 size=a5580h (677248) map[0m
+[0;32mI (410) esp_image: segment 4: paddr=000f55a8 vaddr=40088e88 size=11f30h ( 73520) load[0m
+[0;32mI (439) esp_image: segment 5: paddr=001074e0 vaddr=50000000 size=00020h (    32) load[0m
+[0;32mI (452) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (452) boot: Disabling RNG early entropy source...[0m
+[0;32mI (463) cpu_start: Multicore app[0m
+[0;32mI (471) cpu_start: GPIO 3 and 1 are used as console UART I/O pins[0m
+[0;32mI (471) cpu_start: Pro cpu start user code[0m
+[0;32mI (471) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (473) app_init: Application information:[0m
+[0;32mI (477) app_init: Project name:     hello_world[0m
+[0;32mI (481) app_init: App version:      1[0m
+[0;32mI (485) app_init: Compile time:     Jan 25 2026 17:19:58[0m
+[0;32mI (490) app_init: ELF file SHA256:  c27b4afca...[0m
+[0;32mI (494) app_init: ESP-IDF:          v5.5.2[0m
+[0;32mI (498) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (502) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (506) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (510) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (516) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (521) heap_init: At 3FFB90E0 len 00026F20 (155 KiB): DRAM[0m
+[0;32mI (526) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (531) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (537) heap_init: At 4009ADB8 len 00005248 (20 KiB): IRAM[0m
+[0;32mI (544) spi_flash: detected chip: generic[0m
+[0;32mI (546) spi_flash: flash io: dio[0m
+[0;33mW (549) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (561) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;33mW (571) ADC: legacy driver is deprecated, please migrate to `esp_adc/adc_oneshot.h`[0m
+[0;32mI (579) main_task: Started on CPU0[0m
+[0;32mI (589) main_task: Calling app_main()[0m
+[0;32mI (589) MAIN: ========== BOOT START ==========[0m
+[0;32mI (609) MAIN: NVS initialized[0m
+[0;32mI (609) MAIN: Firebase mutex created[0m
+[0;32mI (609) MAIN: GPIO initialized, relays OFF[0m
+[0;32mI (619) wifi:wifi driver task: 3ffc10fc, prio:23, stack:6656, core=0[0m
+[0;32mI (629) wifi:wifi firmware version: ee91c8c[0m
+[0;32mI (629) wifi:wifi certification version: v7.0[0m
+[0;32mI (629) wifi:config NVS flash: enabled[0m
+[0;32mI (629) wifi:config nano formatting: disabled[0m
+[0;32mI (639) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (639) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (639) wifi:Init management short buffer num: 32[0m
+[0;32mI (649) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (649) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (659) wifi:Init static rx buffer num: 10[0m
+[0;32mI (659) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (669) wifi_init: rx ba win: 6[0m
+[0;32mI (669) wifi_init: accept mbox: 6[0m
+[0;32mI (669) wifi_init: tcpip mbox: 32[0m
+[0;32mI (669) wifi_init: udp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp mbox: 6[0m
+[0;32mI (679) wifi_init: tcp tx win: 5760[0m
+[0;32mI (679) wifi_init: tcp rx win: 5760[0m
+[0;32mI (689) wifi_init: tcp mss: 1440[0m
+[0;32mI (689) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (689) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;33mW (699) wifi:Password length matches WPA2 standards, authmode threshold changes from OPEN to WPA2[0m
+[0;32mI (709) phy_init: phy_version 4863,a3a4459,Oct 28 2025,14:30:06[0m
+[0;32mI (789) wifi:mode : sta (14:2b:2f:da:80:f4)[0m
+[0;32mI (799) wifi:enable tsf[0m
+[0;32mI (799) MAIN: WiFi initialization done[0m
+[0;32mI (799) MAIN: Waiting for WiFi connection...[0m
+[0;32mI (879) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (879) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (4119) wifi:state: auth -> init (0x200)[0m
+[0;32mI (4129) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0[0m
+[0;32mI (4129) MAIN: WiFi disconnected, reconnecting...[0m
+[0;32mI (5799) OLED: Initializing OLED...[0m
+[0;32mI (5799) OLED: I2C initialized successfully[0m
+[0;32mI (5899) OLED: OLED initialized successfully[0m
+[0;32mI (5899) POWER: Initializing power measurement module...[0m
+[0;32mI (5899) POWER: ACS712 initialized on channel 6[0m
+[0;32mI (5949) POWER: ACS712 channel 6 zero point: 2264.54 mV[0m
+[0;32mI (5949) POWER: ACS712 initialized on channel 4[0m
+[0;32mI (5999) POWER: ACS712 channel 4 zero point: 2261.14 mV[0m
+[0;32mI (5999) POWER: ZMPT101B initialized on channel 7[0m
+[0;32mI (5999) POWER: ZMPT101B initialized on channel 5[0m
+[0;32mI (6009) POWER: Power measurement module initialized successfully[0m
+[0;32mI (6009) FIREBASE: Initializing Firebase...[0m
+[0;32mI (6019) FIREBASE: Firebase URL: https://do-an-2-a0cea-default-rtdb.firebaseio.com/[0m
+[1;31mE (6019) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6029) esp-tls: Failed to open new connection[0m
+[1;31mE (6039) transport_base: Failed to open a new connection[0m
+[1;31mE (6039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6049) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6059) esp-tls: Failed to open new connection[0m
+[1;31mE (6069) transport_base: Failed to open a new connection[0m
+[1;31mE (6069) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6079) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6079) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6089) esp-tls: Failed to open new connection[0m
+[1;31mE (6099) transport_base: Failed to open a new connection[0m
+[1;31mE (6099) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6109) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6109) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6119) esp-tls: Failed to open new connection[0m
+[1;31mE (6129) transport_base: Failed to open a new connection[0m
+[1;31mE (6129) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6139) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6149) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6149) esp-tls: Failed to open new connection[0m
+[1;31mE (6159) transport_base: Failed to open a new connection[0m
+[1;31mE (6159) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6169) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6179) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6189) esp-tls: Failed to open new connection[0m
+[1;31mE (6189) transport_base: Failed to open a new connection[0m
+[1;31mE (6189) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6199) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6209) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6219) esp-tls: Failed to open new connection[0m
+[1;31mE (6219) transport_base: Failed to open a new connection[0m
+[1;31mE (6219) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6229) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6239) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6249) esp-tls: Failed to open new connection[0m
+[1;31mE (6249) transport_base: Failed to open a new connection[0m
+[1;31mE (6249) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6259) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6269) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6279) esp-tls: Failed to open new connection[0m
+[1;31mE (6279) transport_base: Failed to open a new connection[0m
+[1;31mE (6289) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6289) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6299) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6309) esp-tls: Failed to open new connection[0m
+[1;31mE (6309) transport_base: Failed to open a new connection[0m
+[1;31mE (6319) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6319) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6329) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6339) esp-tls: Failed to open new connection[0m
+[1;31mE (6339) transport_base: Failed to open a new connection[0m
+[1;31mE (6349) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6349) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6359) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6369) esp-tls: Failed to open new connection[0m
+[1;31mE (6369) transport_base: Failed to open a new connection[0m
+[1;31mE (6379) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6379) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6389) FIREBASE: Firebase initialized successfully[0m
+[0;32mI (6389) MAIN: System initialization completed[0m
+[0;32mI (6389) MAIN: Main task started[0m
+[0;32mI (6399) MAIN: Stack free: 156192 bytes[0m
+[1;31mE (6399) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6409) esp-tls: Failed to open new connection[0m
+[1;31mE (6419) transport_base: Failed to open a new connection[0m
+[1;31mE (6419) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6429) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6429) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6439) esp-tls: Failed to open new connection[0m
+[1;31mE (6449) transport_base: Failed to open a new connection[0m
+[1;31mE (6449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6459) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6459) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6469) esp-tls: Failed to open new connection[0m
+[1;31mE (6479) transport_base: Failed to open a new connection[0m
+[1;31mE (6479) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6489) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6489) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6499) esp-tls: Failed to open new connection[0m
+[1;31mE (6509) transport_base: Failed to open a new connection[0m
+[1;31mE (6509) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6519) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6519) MAIN: ========== BOOT DONE ==========[0m
+[1;31mE (6529) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6539) esp-tls: Failed to open new connection[0m
+[1;31mE (6539) transport_base: Failed to open a new connection[0m
+[1;31mE (6549) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (6549) MAIN: WiFi disconnected, reconnecting...[0m
+[1;31mE (6549) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6549) main_task: Returned from app_main()[0m
+[0;32mI (6569) wifi:E (6569) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0E (6579) esp-tls: Failed to open new connection
+
+[1;31mE (6589) transport_base: Failed to open a new connection[0m
+[0;32mI (6589) wifi:state: init -> auth (0xb0)[0m
+[1;31mE (6589) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6599) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6609) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6619) esp-tls: Failed to open new connection[0m
+[1;31mE (6619) transport_base: Failed to open a new connection[0m
+[1;31mE (6629) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6629) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6639) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6649) esp-tls: Failed to open new connection[0m
+[1;31mE (6649) transport_base: Failed to open a new connection[0m
+[1;31mE (6659) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6659) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6669) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6679) esp-tls: Failed to open new connection[0m
+[1;31mE (6679) transport_base: Failed to open a new connection[0m
+[1;31mE (6689) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6689) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6699) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6709) esp-tls: Failed to open new connection[0m
+[1;31mE (6709) transport_base: Failed to open a new connection[0m
+[1;31mE (6719) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6719) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6729) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6739) esp-tls: Failed to open new connection[0m
+[1;31mE (6739) transport_base: Failed to open a new connection[0m
+[1;31mE (6749) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6749) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6759) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6769) esp-tls: Failed to open new connection[0m
+[1;31mE (6769) transport_base: Failed to open a new connection[0m
+[1;31mE (6779) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6779) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (6799) MAIN: Stack free: 148832 bytes[0m
+[1;31mE (6799) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6799) esp-tls: Failed to open new connection[0m
+[1;31mE (6809) transport_base: Failed to open a new connection[0m
+[1;31mE (6809) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6819) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6819) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6829) esp-tls: Failed to open new connection[0m
+[1;31mE (6839) transport_base: Failed to open a new connection[0m
+[1;31mE (6839) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6849) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6849) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6859) esp-tls: Failed to open new connection[0m
+[1;31mE (6869) transport_base: Failed to open a new connection[0m
+[1;31mE (6869) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6879) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6879) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6889) esp-tls: Failed to open new connection[0m
+[1;31mE (6899) transport_base: Failed to open a new connection[0m
+[1;31mE (6899) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6909) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6919) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6919) esp-tls: Failed to open new connection[0m
+[1;31mE (6929) transport_base: Failed to open a new connection[0m
+[1;31mE (6929) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6939) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6949) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6949) esp-tls: Failed to open new connection[0m
+[1;31mE (6959) transport_base: Failed to open a new connection[0m
+[1;31mE (6959) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6969) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (6979) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (6979) esp-tls: Failed to open new connection[0m
+[1;31mE (6989) transport_base: Failed to open a new connection[0m
+[1;31mE (6989) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (6999) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7009) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7019) esp-tls: Failed to open new connection[0m
+[1;31mE (7019) transport_base: Failed to open a new connection[0m
+[1;31mE (7019) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7029) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7039) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7049) esp-tls: Failed to open new connection[0m
+[1;31mE (7049) transport_base: Failed to open a new connection[0m
+[1;31mE (7049) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7059) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7069) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7079) esp-tls: Failed to open new connection[0m
+[1;31mE (7079) transport_base: Failed to open a new connection[0m
+[1;31mE (7089) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7089) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7099) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7109) esp-tls: Failed to open new connection[0m
+[1;31mE (7109) transport_base: Failed to open a new connection[0m
+[1;31mE (7119) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7119) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7129) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7139) esp-tls: Failed to open new connection[0m
+[1;31mE (7139) transport_base: Failed to open a new connection[0m
+[1;31mE (7149) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7149) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7169) MAIN: Stack free: 148832 bytes[0m
+[1;31mE (7169) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7169) esp-tls: Failed to open new connection[0m
+[1;31mE (7179) transport_base: Failed to open a new connection[0m
+[1;31mE (7179) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7189) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7189) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7199) esp-tls: Failed to open new connection[0m
+[1;31mE (7209) transport_base: Failed to open a new connection[0m
+[1;31mE (7209) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7219) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7219) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7229) esp-tls: Failed to open new connection[0m
+[1;31mE (7239) transport_base: Failed to open a new connection[0m
+[1;31mE (7239) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7249) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7249) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7259) esp-tls: Failed to open new connection[0m
+[1;31mE (7269) transport_base: Failed to open a new connection[0m
+[1;31mE (7269) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7279) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7289) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7289) esp-tls: Failed to open new connection[0m
+[1;31mE (7299) transport_base: Failed to open a new connection[0m
+[1;31mE (7299) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7309) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7309) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7319) esp-tls: Failed to open new connection[0m
+[1;31mE (7329) transport_base: Failed to open a new connection[0m
+[1;31mE (7329) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7339) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7339) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7349) esp-tls: Failed to open new connection[0m
+[1;31mE (7359) transport_base: Failed to open a new connection[0m
+[1;31mE (7359) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7369) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7379) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7379) esp-tls: Failed to open new connection[0m
+[1;31mE (7389) transport_base: Failed to open a new connection[0m
+[1;31mE (7389) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7399) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7409) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7409) esp-tls: Failed to open new connection[0m
+[1;31mE (7419) transport_base: Failed to open a new connection[0m
+[1;31mE (7419) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7429) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7439) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7449) esp-tls: Failed to open new connection[0m
+[1;31mE (7449) transport_base: Failed to open a new connection[0m
+[1;31mE (7449) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7459) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7469) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7479) esp-tls: Failed to open new connection[0m
+[1;31mE (7479) transport_base: Failed to open a new connection[0m
+[1;31mE (7479) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7489) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7499) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7509) esp-tls: Failed to open new connection[0m
+[1;31mE (7509) transport_base: Failed to open a new connection[0m
+[1;31mE (7519) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7519) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7529) MAIN: Stack free: 148832 bytes[0m
+[1;31mE (7529) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7539) esp-tls: Failed to open new connection[0m
+[1;31mE (7539) transport_base: Failed to open a new connection[0m
+[1;31mE (7549) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7549) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7559) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7569) esp-tls: Failed to open new connection[0m
+[1;31mE (7569) transport_base: Failed to open a new connection[0m
+[1;31mE (7579) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7579) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7589) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7599) esp-tls: Failed to open new connection[0m
+[1;31mE (7599) transport_base: Failed to open a new connection[0m
+[1;31mE (7609) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7609) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7619) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7629) esp-tls: Failed to open new connection[0m
+[1;31mE (7629) transport_base: Failed to open a new connection[0m
+[1;31mE (7639) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7639) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7649) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7659) esp-tls: Failed to open new connection[0m
+[1;31mE (7659) transport_base: Failed to open a new connection[0m
+[1;31mE (7669) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7669) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7679) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7689) esp-tls: Failed to open new connection[0m
+[1;31mE (7699) transport_base: Failed to open a new connection[0m
+[1;31mE (7699) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7699) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7709) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7719) esp-tls: Failed to open new connection[0m
+[1;31mE (7729) transport_base: Failed to open a new connection[0m
+[1;31mE (7729) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7739) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7739) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7749) esp-tls: Failed to open new connection[0m
+[1;31mE (7759) transport_base: Failed to open a new connection[0m
+[1;31mE (7759) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7769) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7769) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7779) esp-tls: Failed to open new connection[0m
+[1;31mE (7789) transport_base: Failed to open a new connection[0m
+[1;31mE (7789) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7799) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7799) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7809) esp-tls: Failed to open new connection[0m
+[1;31mE (7819) transport_base: Failed to open a new connection[0m
+[1;31mE (7819) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7829) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7829) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7839) esp-tls: Failed to open new connection[0m
+[1;31mE (7849) transport_base: Failed to open a new connection[0m
+[1;31mE (7849) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7859) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7859) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7869) esp-tls: Failed to open new connection[0m
+[1;31mE (7879) transport_base: Failed to open a new connection[0m
+[1;31mE (7879) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7889) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (7899) MAIN: Stack free: 148832 bytes[0m
+[1;31mE (7899) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7909) esp-tls: Failed to open new connection[0m
+[1;31mE (7909) transport_base: Failed to open a new connection[0m
+[1;31mE (7919) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (7919) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7929) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7939) esp-tls: Failed to open new connection[0m
+[1;31mE (7939) transport_base: Failed to open a new connection[0m
+[1;31mE (7949) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (7949) wifi:E (7949) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+state: auth -> assoc (0x0)
+[1;31mE (7959) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7969) esp-tls: Failed to open new connection[0m
+[1;31mE (7979) transport_base: Failed to open a new connection[0m
+[0;32mI (7979) wifi:E (7979) HTTP_CLIENT: Connection failed, sock < 0[0m
+state: assoc -> run (0x10)
+[1;31mE (7989) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (7999) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (7999) esp-tls: Failed to open new connection[0m
+[1;31mE (8009) transport_base: Failed to open a new connection[0m
+[1;31mE (8009) HTTP_CLIENT: Connection failed, sock < 0[0m
+[1;31mE (8019) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[1;31mE (8029) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (8039) esp-tls: Failed to open new connection[0m
+[1;31mE (8039) transport_base: Failed to open a new connection[0m
+[1;31mE (8039) HTTP_CLIENT: Connection failed, sock < 0[0m
+[0;32mI (8049) wifi:connected with Redmi Note 14, aid = 1, channel 1, BW20, bssid = 1a:9a:2f:27:59:1f[0m
+[1;31mE (8049) FIREBASE: HTTP request failed: ESP_ERR_HTTP_CONNECT[0m
+[0;32mI (8059) wifi:security: WPA3-SAE, phy: bgn, rssi: -39[0m
+[1;31mE (8059) esp-tls: couldn't get hostname for :do-an-2-a0cea-default-rtdb.firebaseio.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (8069) wifi:E (8079) esp-tls: Failed to open new connection[0m
+pm start, type: 1
+[1;31mE (8079) transport_base: Failed to open a new connection[0m
+
+[1;31mE (8089) HTTP_CLIENT: Connec

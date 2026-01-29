@@ -1,0 +1,43 @@
+Command: ninja all
+[1/15] Performing build step for 'bootloader'
+[1/1] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\DA2\hello_world\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/DA2/hello_world/build/bootloader/bootloader.bin"
+Bootloader binary size 0x66c0 bytes. 0x940 bytes (8%) free.
+[2/15] No install step for 'bootloader'
+[3/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/logout.c.obj
+[4/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/OLED.c.obj
+[5/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/login.c.obj
+[6/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/RFID.c.obj
+[7/15] Completed 'bootloader'
+[8/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/firebase.c.obj
+[9/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/components/power.c.obj
+In file included from D:/DA2/hello_world/main/components/power.h:6,
+                 from D:/DA2/hello_world/main/components/power.c:2:
+C:/Espressif/frameworks/esp-idf-v5.5.2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/DA2/hello_world/main/components/power.h:7:
+C:/Espressif/frameworks/esp-idf-v5.5.2/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+[10/15] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+In file included from D:/DA2/hello_world/main/components/power.h:6,
+                 from D:/DA2/hello_world/main/main.c:7:
+C:/Espressif/frameworks/esp-idf-v5.5.2/components/driver/deprecated/driver/adc.h:19:2: warning: #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively" [-Wcpp]
+   19 | #warning "legacy adc driver is deprecated, please migrate to use esp_adc/adc_oneshot.h and esp_adc/adc_continuous.h for oneshot mode and continuous mode drivers respectively"
+      |  ^~~~~~~
+In file included from D:/DA2/hello_world/main/components/power.h:7:
+C:/Espressif/frameworks/esp-idf-v5.5.2/components/esp_adc/deprecated/include/esp_adc_cal.h:17:2: warning: #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h" [-Wcpp]
+   17 | #warning "legacy adc calibration driver is deprecated, please migrate to use esp_adc/adc_cali.h and esp_adc/adc_cali_scheme.h"
+      |  ^~~~~~~
+[11/15] Linking C static library esp-idf\main\libmain.a
+[12/15] Generating esp-idf/esp_system/ld/sections.ld
+[13/15] Linking CXX executable hello_world.elf
+[14/15] Generating binary image from built executable
+esptool.py v4.11.dev1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/DA2/hello_world/build/hello_world.bin
+[15/15] C:\WINDOWS\system32\cmd.exe /C "cd /D D:\DA2\hello_world\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.5_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.5.2/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/DA2/hello_world/build/partition_table/partition-table.bin D:/DA2/hello_world/build/hello_world.bin"
+hello_world.bin binary size 0xf7d50 bytes. Smallest app partition is 0x100000 bytes. 0x82b0 bytes (3%) free.
+Warning: The smallest app partition is nearly full (3% free space left)!
