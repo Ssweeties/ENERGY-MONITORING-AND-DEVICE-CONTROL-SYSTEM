@@ -123,8 +123,8 @@ The system uses the following data structure in Firebase Realtime Database:
 
 ## PCB Power Preview
 <p align="center">
-  <img src="https://raw.githubusercontent.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/4b6d2a89e689d59ae54faa43eb4810e50bcf8c6f/PCB_Power_1.png" width="37%">
-  <img src="https://raw.githubusercontent.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/4b6d2a89e689d59ae54faa43eb4810e50bcf8c6f/PCB_Power_2.jpg" width="46%">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/ce10ef3aa47a0de6ae87c81d102775f9e30b95ed/img/PCB_Power_1.png?raw=true" width="37%">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/ce10ef3aa47a0de6ae87c81d102775f9e30b95ed/img/PCB_Power_2.jpg?raw=true" width="46%">
 </p>
 
 ## OLED Preview
