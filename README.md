@@ -118,7 +118,7 @@ The system uses the following data structure in Firebase Realtime Database:
    - The last energy data will be stored on Firebase so it can be retrieved in the next session when the user logs in again.
 ## Functional Diagram
 <p align="center">
-  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/efba6280bf971073726105588f0268d36c55d98b/Diagram.png?raw=true" alt="Diagram">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/d3222e08c455b0b7b3be6c2ac91a05b1994e28e5/img/Diagram.png?raw=true" alt="Diagram">
 </p>
 
 ## PCB Power Preview
