@@ -31,15 +31,21 @@ The system uses the following data structure in Firebase Realtime Database:
 ├── CMakeLists.txt
 ├── README.md
 ├── src
-│   ├── main.c           # Main application logic (State Machine)
-│   ├── main.h           # Configuration (WiFi, API Keys, Pin Config)
+│   ├── main.c           # System init & task setup
+│   ├── main.h           # Configuration, Pin Definitions, and Structures
 │   └── components
-│       ├── power.c      # Sensor drivers (ACS712, ZMPT101B)
-│       ├── RFID.c       # SPI Driver for MFRC522
-│       ├── firebase.c   # HTTPS REST Client for Firebase
+│       ├── power.c      # Drivers for ACS712 & ZMPT101B sensors
+│       ├── power.h      # Function declarations and data structures for power sensors
+│       ├── RFID.c       # MFRC522 Driver
+│       ├── RFID.h       # RFID interface & register definitions
+│       ├── firebase.c   # HTTPS REST Client for Firebase RTDB
+│       ├── firebase.h   # Function declarations for Firebase
 │       ├── OLED.c       # I2C Driver for SSD1306 Display
-│       ├── login.c      # Authentication Logic
-│       └── logout.c     # Session Management
+│       ├── OLED.h       # SSD1306 Commands, Font Data & Function Declarations for OLED
+│       ├── login.c      # Login handle
+│       ├── login.h      # Function declarations for Login
+│       ├── logout.c     # Logout handle
+│       └── logout.h     # Function declarations for Logout
 ```
 
 ## 🧩 Hardware Connections
@@ -116,6 +122,6 @@ I (13600) FIREBASE: Data Pushed
 *   ✅ **User-Friendly**: Clear OLED interface for local feedback.
 
 ## 👤 Author
-**Lê Hồng Phong – 22119210**
+**Trần Huỳnh**
 Faculty of Electrical-Electronics, HCMUTE
-📧 Email: lehongphong@gmail.com
+📧 Email: huynhtran30112004@gmail.com
