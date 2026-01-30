@@ -50,9 +50,9 @@ This project is a comprehensive IoT solution designed to monitor electrical para
 
 ## Firebase Configuration
 The system uses the following data structure in Firebase Realtime Database:
-*   **`dev1/`** & **`dev2/`**: Stores electrical values (`U`, `I`, `P`, `E`) and Relay `Status`.
+*   **`dev1/`** & **`dev2/`**: Stores electrical values (`U`, `I`, `P`, `E`) and Relay `Status` (bool).
 *   **`User/`**: Tracks cumulative energy usage per user (`E`, `E1`, `E2`).
-*   **`login`, `logout`**: System state flags.
+*   **`login`, `logout`**: System state flags (bool).
 
 ## Project Structure
 ```text
