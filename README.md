@@ -93,7 +93,7 @@ The system uses the following data structure in Firebase Realtime Database:
     *   Find the COM port (e.g., `COM3` on Windows, `/dev/ttyUSB0` on Linux).
     *   Run the command:
       ```bash
-        idf.py -p COM3 flash monitor
+      idf.py -p COM3 flash monitor
       ```
 
 ## System Behavior & Workflow
