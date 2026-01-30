@@ -12,9 +12,9 @@ This project is a comprehensive IoT solution designed to monitor electrical para
 2.  Navigate to `src/main.h`.
 3.  Update the following macros with your credentials:
     ```c
-    #define WIFI_SSID           "Your_WiFi_Name"      // Replace with your WiFi SSID
-    #define WIFI_PASSWORD       "Your_WiFi_Password"  // Replace with your WiFi Password
-    #define FIREBASE_API_KEY    "Your_Firebase_Web_API_Key"
+    #define WIFI_SSID           "Your_WiFi_Name"      
+    #define WIFI_PASSWORD       "Your_WiFi_Password"  
+    #define FIREBASE_API_KEY    "Your_Firebase_API_Key"
     #define FIREBASE_DB_URL     "https://your-project-id.firebaseio.com/"
     ```
 4.  (Optional) Update `VALID_UIDS` in `src/main.c` to add valid UID.
