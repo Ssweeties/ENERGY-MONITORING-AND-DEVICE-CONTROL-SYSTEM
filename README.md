@@ -120,6 +120,9 @@ The system uses the following data structure in Firebase Realtime Database:
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/efba6280bf971073726105588f0268d36c55d98b/Diagram.png?raw=true" alt="Diagram">
 </p>
+
+## PCB Power Preview
+
 ## Product Preview  
 
 ## System Protection
