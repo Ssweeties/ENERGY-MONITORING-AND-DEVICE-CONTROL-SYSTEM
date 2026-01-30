@@ -131,7 +131,7 @@ The system uses the following data structure in Firebase Realtime Database:
 
 ## Product Preview  
 <p align="center">
-  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/fef3e3edf25b61ce658d4e40ff8bce660d8d2484/Product.jpg?raw=true" alt="Diagram" width="46%">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/1511bfd2bb4d7e161b8767a6d5d58ec49d36c787/img/Product.jpg?raw=true" alt="Diagram" width="46%">
 </p>
 
 ## System Protection
