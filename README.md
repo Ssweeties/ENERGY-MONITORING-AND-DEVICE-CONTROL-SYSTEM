@@ -17,7 +17,7 @@ This project is a comprehensive IoT solution designed to monitor electrical para
     #define FIREBASE_API_KEY    "Your_Firebase_Web_API_Key"
     #define FIREBASE_DB_URL     "https://your-project-id.firebaseio.com/"
     ```
-4.  (Optional) Update `VALID_UIDS` in `src/main.c` to add your RFID card UIDs.
+4.  (Optional) Update `VALID_UIDS` in `src/main.c` to add valid UID.
 ### Build and Flash
 1.  **Open Terminal**: Use the ESP-IDF terminal in VS Code.
 2.  **Set Target** (First time only):
@@ -35,8 +35,6 @@ This project is a comprehensive IoT solution designed to monitor electrical para
         ```bash
         idf.py -p COM3 flash monitor
         ```
-        *(Replace `COM3` with your actual port)*.
-
 ## Requirements
 *   **ESP-IDF**: [v5.5.2](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
 *   **Cloud Platform**: Google Firebase (Realtime Database)
