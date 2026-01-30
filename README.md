@@ -19,6 +19,7 @@ This project is a comprehensive IoT solution designed to monitor electrical para
     *   OLED SSD1306 Display (I2C)
     *   2x Relays 5V
     *   2x AC Loads (Bulbs, Fans, etc.)
+    *   Compact AC/DC power module HLK-10M05
 
 ### ☁️ Firebase Configuration
 The system uses the following data structure in Firebase Realtime Database:
