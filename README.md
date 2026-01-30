@@ -7,6 +7,35 @@
 This project is a comprehensive IoT solution designed to monitor electrical parameters (Voltage, Current) and Calculator Energy Power (Power, Energy) for two separate devices using **ACS712** and **ZMPT101B**. It integrates **RFID*** authentication for secure access control, ensuring that only authorized users can activate the devices. Real-time data is synchronized with **Google Firebase** for remote monitoring and control, and key metrics are displayed locally on an **OLED SSD1306 screen** and **App**.
 
 ## How to Use
+### Before flashing, you must configure your network and Firebase credentials.
+1.  Open the project in VS Code.
+2.  Navigate to `src/main.h`.
+3.  Update the following macros with your credentials:
+    ```c
+    #define WIFI_SSID           "Your_WiFi_Name"      // Replace with your WiFi SSID
+    #define WIFI_PASSWORD       "Your_WiFi_Password"  // Replace with your WiFi Password
+    #define FIREBASE_API_KEY    "Your_Firebase_Web_API_Key"
+    #define FIREBASE_DB_URL     "https://your-project-id.firebaseio.com/"
+    ```
+4.  (Optional) Update `VALID_UIDS` in `src/main.c` to add your RFID card UIDs.
+### Build and Flash
+1.  **Open Terminal**: Use the ESP-IDF terminal in VS Code.
+2.  **Set Target** (First time only):
+    ```bash
+    idf.py set-target esp32
+    ```
+3.  **Build the Project**:
+    ```bash
+    idf.py build
+    ```
+4.  **Flash and Monitor**:
+    *   Connect your ESP32 via USB.
+    *   Find the COM port (e.g., `COM3` on Windows, `/dev/ttyUSB0` on Linux).
+    *   Run the command:
+        ```bash
+        idf.py -p COM3 flash monitor
+        ```
+        *(Replace `COM3` with your actual port)*.
 
 ## Requirements
 *   **ESP-IDF**: [v5.5.2](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
