@@ -69,16 +69,15 @@ The system uses the following data structure in Firebase Realtime Database:
 
 ## How to Use
 ### Before flashing, you must configure your network and Firebase credentials.
-1.  Open the project in VS Code.
-2.  Navigate to `src/main.h`.
-3.  Update the following macros with your credentials:
+1.  Clone and open the project
+2.  Update the following macros with your credentials in `src/main.h`:
     ```c
     #define WIFI_SSID           "Your_WiFi_Name"      
     #define WIFI_PASSWORD       "Your_WiFi_Password"  
     #define FIREBASE_API_KEY    "Your_Firebase_API_Key"
     #define FIREBASE_DB_URL     "https://your-project-id.firebaseio.com/"
     ```
-4.  (Optional) Update `VALID_UIDS` in `src/main.c` to add valid UID.
+3.  Update `VALID_UIDS` in `src/main.c` to add valid UID.
 ### Build and Flash
 1.  **Open Terminal**: Use the ESP-IDF terminal in VS Code.
 2.  **Set Target** (First time only):
