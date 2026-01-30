@@ -120,7 +120,9 @@ The system uses the following data structure in Firebase Realtime Database:
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
 </p>
-## Product Preview
+
+## Product Preview  
+
 ## System Protection
 *   **Wi-Fi Lost** → Auto-reconnect starts.
 *   **Firebase Conflict** → Mutex protects data during read/write.
