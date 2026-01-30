@@ -75,16 +75,16 @@ The system uses the following data structure in Firebase Realtime Database:
    - The OLED displays "PLEASE LOGIN", requiring the user to initiate the login process via the app to set the login flag.
    - Once the login flag is set, the RFID task will be created and will wait for the user to scan an RFID card.
    - If the RFID is valid, the login process will be completed, the login flag will be cleared, and the system will be set up before entering the main task.
-4. **Setup**: After a valid RFID card is scanned, the relay will be activated and turned on. The system then retrieves the last session data from Firebase to calculate the next energy value. After that, the system enters the main task.
-5. **Main task**:
+3. **Setup**: After a valid RFID card is scanned, the relay will be activated and turned on. The system then retrieves the last session data from Firebase to calculate the next energy value. After that, the system enters the main task.
+4. **Main task**:
    - Read voltage and current values from the sensors and calculate power and energy.
    - Display the measured values on the OLED.
    - Update the values to Firebase.
    - Store energy data to Firebase every 5 seconds so it can be retrieved in the next session when the user logs in again.
-6.  **Remote Control**:
+5. **Remote Control**:
    - Change `dev1/Status` to `true` or `false` in Firebase to remotely toggle the relay.
    - If the relay is turned off, the system will not measure power.
-7.  **Logout**:
+6. **Logout**:
    - If the user wants to log out, the user can set the logout flag via the app.
    - Once the logout flag is set, the system will stop measuring power.
    - The relay will be turned off and deactivated.
