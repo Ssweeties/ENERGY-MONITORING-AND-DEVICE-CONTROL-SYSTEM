@@ -9,7 +9,7 @@ This project is a comprehensive IoT solution designed to monitor electrical para
 ## 🛠️ How to Use
 
 ### 🔧 Requirements
-*   **ESP-IDF**: [v5.5.2]([https://docs.espressif.com/projects/esp-idf/en/v4.4.4/esp32/get-started/index.html](https://dl.espressif.com/dl/esp-idf/?idf=4.4))
+*   **ESP-IDF**: [v5.5.2](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
 *   **Cloud Platform**: Google Firebase (Realtime Database)
 *   **Hardware Components**:
     *   ESP32 DevKit V1
