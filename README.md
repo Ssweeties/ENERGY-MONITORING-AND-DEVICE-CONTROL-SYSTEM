@@ -138,7 +138,7 @@ The system uses the following data structure in Firebase Realtime Database:
 *   **Wi-Fi Lost** → Auto-reconnect starts.
 *   **Firebase Conflict** → Mutex protects data during read/write.
 *   **Unauthorized Access** → The system does not measure power and the relay off.
-*   
+
 ## Result Summary
 *   Sensor readings are stable and accurate.
 *   Firebase communication is fast and reliable.
