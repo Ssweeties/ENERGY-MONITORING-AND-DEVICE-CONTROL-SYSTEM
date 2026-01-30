@@ -116,34 +116,22 @@ The system uses the following data structure in Firebase Realtime Database:
    - Once the logout flag is set, the system will stop measuring power.
    - The relay will be turned off and deactivated.
    - The last energy data will be stored on Firebase so it can be retrieved in the next session when the user logs in again.
-## 📈 Functional Diagram
+## Functional Diagram
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
 </p>
-
-## Dashboard (Firebase)
-*   **Real-time**: View Voltage/Current graphs.
-*   **Control**: Toggle switches for Device 1 & 2.
-
+## Product Preview
 ## System Protection
-*   **Noise Filtering**: Software filters for ACS712 noise (<50mA) and ZMPT101B (<10V).
-*   **Data Safety**: Uses Mutex for thread-safe Firebase operations.
-*   **WiFi Reconnect**: Aautomatically attempts to reconnect if signal is lost.
-
-## I/O Summary
-
-| Signal | Type | Description |
-| :--- | :--- | :--- |
-| `dev1.power` | Output | Calculated Power (W) sent to Cloud/OLED |
-| `dev1.energy` | Output | Accumulated Energy (Wh) per session |
-| `relay1_on` | Input/Output | Controlled via RFID logic OR Firebase |
-| `is_logged_in` | Flag | Global system security state |
-
+*   **Wi-Fi Lost** → Auto-reconnect starts.
+*   **Firebase Conflict** → Mutex protects data during read/write.
+*   **Unauthorized Access** → The system does not measure power and the relay off.
+*   
 ## Result Summary
-*   **Accurate Metering**: Calibrated for standard AC loads.
-*   **Secure**: RFID-based physical access control.
-*   **Responsive**: Low-latency control via Firebase Stream.
-*   **User-Friendly**: Clear OLED interface for local feedback.
+*   Sensor readings are stable and accurate.
+*   Firebase communication is fast and reliable.
+*   Remote Relay control works smoothly.
+*   OLED shows real-time data clearly.
+*   RFID scanning is fast and reliable.
 
 ## Author
 **Trần Huỳnh**  
