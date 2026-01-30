@@ -124,5 +124,6 @@ I (13600) FIREBASE: Data Pushed
 
 ## 👤 Author
 **Trần Huỳnh**
-Faculty of Electrical-Electronics, HCMUTE
-📧 Email: huynhtran30112004@gmail.com
+Major: Computer Engineering Technology  
+Faculty of Electrical-Electronics, HCMUTE  
+Email: huynhtran30112004@gmail.com  
