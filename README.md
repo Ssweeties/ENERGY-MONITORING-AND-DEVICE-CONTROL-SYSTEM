@@ -1,14 +1,14 @@
-# 🌐 Energy Monitoring & Device Control System (ESP32 + Firebase + App)
+# Energy Monitoring & Device Control System (ESP32 + Firebase + App)
 
-## 📌 Project Title
+##Project Title
 **IoT-Based Energy Monitoring and Device Control System Using ESP32, ACS712, ZMPT101B, OLED, RFID, RELAY**
 
-## 📖 Description
+## Description
 This project is a comprehensive IoT solution designed to monitor electrical parameters (Voltage, Current) and Calculator Energy Power (Power, Energy) for two separate devices using **ACS712** and **ZMPT101B**. It integrates **RFID*** authentication for secure access control, ensuring that only authorized users can activate the devices. Real-time data is synchronized with **Google Firebase** for remote monitoring and control, and key metrics are displayed locally on an **OLED SSD1306 screen** and **App**.
 
-## 🛠️ How to Use
+## How to Use
 
-### 🔧 Requirements
+## Requirements
 *   **ESP-IDF**: [v5.5.2](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
 *   **Cloud Platform**: Google Firebase (Realtime Database)
 *   **Hardware Components**:
@@ -21,13 +21,13 @@ This project is a comprehensive IoT solution designed to monitor electrical para
     *   2x AC Loads (Bulbs, Fans, etc.)
     *   Compact AC/DC power module HLK-10M05
 
-### ☁️ Firebase Configuration
+## Firebase Configuration
 The system uses the following data structure in Firebase Realtime Database:
 *   **`dev1/`** & **`dev2/`**: Stores electrical values (`U`, `I`, `P`, `E`) and Relay `Status`.
 *   **`User/`**: Tracks cumulative energy usage per user (`E`, `E1`, `E2`).
 *   **`login`, `logout`**: System state flags.
 
-### 📁 Project Structure
+## Project Structure
 ```text
 ├── CMakeLists.txt
 ├── README.md
@@ -49,7 +49,7 @@ The system uses the following data structure in Firebase Realtime Database:
 │       └── logout.h     # Function declarations for Logout
 ```
 
-## 🧩 Hardware Connections
+## Hardware Connections
 
 | Component | Pin Name | ESP32 GPIO | Notes |
 | :--- | :--- | :--- | :--- |
@@ -69,7 +69,7 @@ The system uses the following data structure in Firebase Realtime Database:
 - The ADC samples the ACS712 and ZMPT101B AC signals biased at Vin/2.
 - ADC operates at 3.3V, so the ACS712 and ZMPT101B **Vcc** must be scaled down to 3.3V.
   
-## 🌐 System Behavior & Workflow
+## System Behavior & Workflow
 1. **Startup**: The OLED displays "CONNECT WIFI..." to require the user to connect to Wi-Fi. Once Wi-Fi is connected, the sensors and Firebase will be initialized.
 2. **Login**:
    - The OLED displays "PLEASE LOGIN", requiring the user to initiate the login process via the app to set the login flag.
@@ -93,28 +93,18 @@ The system uses the following data structure in Firebase Realtime Database:
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
 </p>
-## 📺 Example Output
+## Example Output
 
-### Terminal Log
-```text
-I (5240) WIFI: Connected, IP: 192.168.1.105
-I (5500) SYSTEM: Ready
-I (12000) RFID: Card Detected: EE:E0:E8:00
-I (12100) LOGIN: Access Granted
-I (13500) PWR: Dev1: 220V 0.5A 110W | Dev2: 0V 0A 0W
-I (13600) FIREBASE: Data Pushed
-```
-
-### Dashboard (Firebase)
+## Dashboard (Firebase)
 *   **Real-time**: View Voltage/Current graphs.
 *   **Control**: Toggle switches for Device 1 & 2.
 
-### System Protection
+## System Protection
 *   **Noise Filtering**: Software filters for ACS712 noise (<50mA) and ZMPT101B (<10V).
 *   **Data Safety**: Uses Mutex for thread-safe Firebase operations.
 *   **WiFi Reconnect**: Aautomatically attempts to reconnect if signal is lost.
 
-## 🔌 I/O Summary
+## I/O Summary
 
 | Signal | Type | Description |
 | :--- | :--- | :--- |
@@ -123,13 +113,13 @@ I (13600) FIREBASE: Data Pushed
 | `relay1_on` | Input/Output | Controlled via RFID logic OR Firebase |
 | `is_logged_in` | Flag | Global system security state |
 
-## ✅ Result Summary
-*   ✅ **Accurate Metering**: Calibrated for standard AC loads.
-*   ✅ **Secure**: RFID-based physical access control.
-*   ✅ **Responsive**: Low-latency control via Firebase Stream.
-*   ✅ **User-Friendly**: Clear OLED interface for local feedback.
+## Result Summary
+*   **Accurate Metering**: Calibrated for standard AC loads.
+*   **Secure**: RFID-based physical access control.
+*   **Responsive**: Low-latency control via Firebase Stream.
+*   **User-Friendly**: Clear OLED interface for local feedback.
 
-## 👤 Author
+## Author
 **Trần Huỳnh**  
 Major: Computer Engineering Technology  
 Faculty of Electrical-Electronics, HCMUTE  
