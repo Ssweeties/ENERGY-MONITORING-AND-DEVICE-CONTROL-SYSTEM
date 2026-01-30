@@ -83,8 +83,8 @@ The system uses the following data structure in Firebase Realtime Database:
     *   Set `logout` to `true` in Firebase to force end the session.
 
 ## 📈 Functional Diagram
-*(Recommend adding a block diagram here showing ESP32 connected to Sensors, Relays, and Firebase)*
-
+[*(Diagram)*
+](https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/main/Diagram.png?raw=true)
 ## 📺 Example Output
 
 ### Terminal Log
