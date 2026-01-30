@@ -123,7 +123,7 @@ I (13600) FIREBASE: Data Pushed
 *   ✅ **User-Friendly**: Clear OLED interface for local feedback.
 
 ## 👤 Author
-**Trần Huỳnh**
+**Trần Huỳnh**  
 Major: Computer Engineering Technology  
 Faculty of Electrical-Electronics, HCMUTE  
 Email: huynhtran30112004@gmail.com  
