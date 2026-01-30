@@ -1,10 +1,10 @@
-# 🌐 Smart Energy Monitoring & Device Control System (ESP32 + Firebase)
+# 🌐 Energy Monitoring & Device Control System (ESP32 + Firebase + App)
 
 ## 📌 Project Title
-**IoT-Based Energy Monitoring and Access Control System Using ESP32, RFID, and Firebase**
+**IoT-Based Energy Monitoring and Device Control System Using ESP32, ACS712, ZMPT101B, OLED, RFID, RELAY**
 
 ## 📖 Description
-This project is a comprehensive IoT solution designed to monitor electrical parameters (Voltage, Current, Power, Energy) for two separate devices. It integrates **RFID authentication** for secure access control, ensuring that only authorized users can activate the devices. Real-time data is synchronized with **Google Firebase** for remote monitoring and control, and key metrics are displayed locally on an **OLED SSD1306 screen**.
+This project is a comprehensive IoT solution designed to monitor electrical parameters (Voltage, Current) and Calculator Energy Power (Power, Energy) for two separate devices using **ACS712** and **ZMPT101B**. It integrates **RFID*** authentication for secure access control, ensuring that only authorized users can activate the devices. Real-time data is synchronized with **Google Firebase** for remote monitoring and control, and key metrics are displayed locally on an **OLED SSD1306 screen** and **App**.
 
 ## 🛠️ How to Use
 
@@ -12,12 +12,12 @@ This project is a comprehensive IoT solution designed to monitor electrical para
 *   **ESP-IDF**: [v5.5.2](https://dl.espressif.com/dl/esp-idf/?idf=4.4)
 *   **Cloud Platform**: Google Firebase (Realtime Database)
 *   **Hardware Components**:
-    *   ESP32 DevKit V1
-    *   2x ACS712 Current Sensors (30A)
+    *   ESP32 DevKit 32D
+    *   2x ACS712 Current Sensors (20A)
     *   2x ZMPT101B Voltage Sensors
-    *   RC522 RFID Reader
+    *   MFRC522 RFID Reader
     *   OLED SSD1306 Display (I2C)
-    *   2x Relays (5V/12V)
+    *   2x Relays 5V
     *   2x AC Loads (Bulbs, Fans, etc.)
 
 ### ☁️ Firebase Configuration
