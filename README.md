@@ -90,7 +90,7 @@ The system uses the following data structure in Firebase Realtime Database:
     ```
 4.  **Flash and Monitor**:
     *   Connect your ESP32 via USB.
-    *   Find the COM port (e.g., `COM3` on Windows, `/dev/ttyUSB0` on Linux).
+    *   Find the COM port (e.g., `COM3`).
     *   Run the command:
       ```bash
       idf.py -p COM3 flash monitor
