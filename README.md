@@ -83,8 +83,9 @@ The system uses the following data structure in Firebase Realtime Database:
     *   Set `logout` to `true` in Firebase to force end the session.
 
 ## 📈 Functional Diagram
+https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg
 <p align="center">
-  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/main/Diagram.png?raw=true" alt="Diagram">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
 </p>
 ## 📺 Example Output
 
