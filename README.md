@@ -130,6 +130,9 @@ The system uses the following data structure in Firebase Realtime Database:
 ## OLED Preview
 
 ## Product Preview  
+<p align="center">
+  <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/fef3e3edf25b61ce658d4e40ff8bce660d8d2484/Product.jpg?raw=true" alt="Diagram">
+</p>
 
 ## System Protection
 *   **Wi-Fi Lost** → Auto-reconnect starts.
