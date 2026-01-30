@@ -9,7 +9,7 @@ This project is a comprehensive IoT solution designed to monitor electrical para
 ## 🛠️ How to Use
 
 ### 🔧 Requirements
-*   **ESP-IDF**: [v4.4.4](https://docs.espressif.com/projects/esp-idf/en/v4.4.4/esp32/get-started/index.html) or later
+*   **ESP-IDF**: [v5.5.2]([https://docs.espressif.com/projects/esp-idf/en/v4.4.4/esp32/get-started/index.html](https://dl.espressif.com/dl/esp-idf/?idf=4.4))
 *   **Cloud Platform**: Google Firebase (Realtime Database)
 *   **Hardware Components**:
     *   ESP32 DevKit V1
@@ -83,7 +83,6 @@ The system uses the following data structure in Firebase Realtime Database:
     *   Set `logout` to `true` in Firebase to force end the session.
 
 ## 📈 Functional Diagram
-https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
 </p>
