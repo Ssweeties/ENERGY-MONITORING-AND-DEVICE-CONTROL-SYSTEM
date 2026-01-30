@@ -65,24 +65,30 @@ The system uses the following data structure in Firebase Realtime Database:
 | | ACS712 (Dev 2) | **GPIO 32** | Analog Input (ADC1_4) |
 | | ZMPT101B (Dev 2)| **GPIO 33** | Analog Input (ADC1_5) |
 | **Controls** | Relay 1 | **GPIO 14** | Active High |
-| | Relay 2 | **GPIO 27** | Active High |
-
+| | Relay 2 | **GPIO 27** | Active High |  
+- The ADC samples the ACS712 and ZMPT101B AC signals biased at Vin/2.
+- ADC operates at 3.3V, so the ACS712 and ZMPT101B **Vcc** must be scaled down to 3.3V.
+  
 ## 🌐 System Behavior & Workflow
-1.  **Startup**: Connects to Wi-Fi (Credentials in `main.h`) and syncs with Firebase.
-2.  **Idle State**: OLED displays "Please Login" or Wi-Fi status. Relays are OFF.
-3.  **Authentication**:
-    *   User scans RFID card.
-    *   System validates UID against hardcoded list (`EE:E0:E8:00`, etc.).
-    *   If valid: Logs in, enables Relays, starts metering.
-4.  **Active State**:
-    *   Reads Voltage/Current every **1.5s**.
-    *   Calculates Power (W) and accumulated Energy (Wh).
-    *   Updates OLED with real-time values.
-    *   Syncs data to Firebase.
-5.  **Remote Control**:
-    *   Change `dev1/Status` to `true`/`false` in Firebase to toggle relay remotely.
-    *   Set `logout` to `true` in Firebase to force end the session.
-
+1. **Startup**: The OLED displays "CONNECT WIFI..." to require the user to connect to Wi-Fi. Once Wi-Fi is connected, the sensors and Firebase will be initialized.
+2. **Login**:
+   - The OLED displays "PLEASE LOGIN", requiring the user to initiate the login process via the app to set the login flag.
+   - Once the login flag is set, the RFID task will be created and will wait for the user to scan an RFID card.
+   - If the RFID is valid, the login process will be completed, the login flag will be cleared, and the system will be set up before entering the main task.
+4. **Setup**: After a valid RFID card is scanned, the relay will be activated and turned on. The system then retrieves the last session data from Firebase to calculate the next energy value. After that, the system enters the main task.
+5. **Main task**:
+   - Read voltage and current values from the sensors and calculate power and energy.
+   - Display the measured values on the OLED.
+   - Update the values to Firebase.
+   - Store energy data to Firebase every 5 seconds so it can be retrieved in the next session when the user logs in again.
+6.  **Remote Control**:
+   - Change `dev1/Status` to `true` or `false` in Firebase to remotely toggle the relay.
+   - If the relay is turned off, the system will not measure power.
+7.  **Logout**:
+   - If the user wants to log out, the user can set the logout flag via the app.
+   - Once the logout flag is set, the system will stop measuring power.
+   - The relay will be turned off and deactivated.
+   - The last energy data will be stored on Firebase so it can be retrieved in the next session when the user logs in again.
 ## 📈 Functional Diagram
 <p align="center">
   <img src="https://github.com/Ssweeties/ENERGY-MONITORING-AND-DEVICE-CONTROL-SYSTEM/blob/367211c614a768c98c3d7ebf71aa34f40d9ed9d1/Diagram.jpg?raw=true" alt="Diagram">
