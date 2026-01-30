@@ -92,9 +92,9 @@ The system uses the following data structure in Firebase Realtime Database:
     *   Connect your ESP32 via USB.
     *   Find the COM port (e.g., `COM3` on Windows, `/dev/ttyUSB0` on Linux).
     *   Run the command:
-        ```bash
+      ```bash
         idf.py -p COM3 flash monitor
-        ```
+      ```
 
 ## System Behavior & Workflow
 1. **Startup**: The OLED displays "CONNECT WIFI..." to require the user to connect to Wi-Fi. Once Wi-Fi is connected, the sensors and Firebase will be initialized.
